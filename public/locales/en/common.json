@@ -1,0 +1,50 @@
+{
+  "panditName": "Pandit Lalit Lohani",
+  "panditDes": "Nestled in Rudrapur, Uttarakhand, Pandit Lalit Lohani brings over 25 years of astrological mastery. Known for his 'hasthlikhit' (handwritten) horoscopes and precise predictions, he provides a guiding light in life's journey, offering an array of services including horoscope matching, Vastu consultation for factories and industries, detailed yearly forecasts, Muhurta calculations, effective home remedies, and personalized astrology stone recommendations, all imbued with the mystical energy of the Himalayas.",
+  "ourServicesTitle": "Explore Our Specialized Astrological Services",
+  "ourServicesHeading": "Expert Astrological Services by Pandit Lalit Lohani",
+  "ourServicesDes": "Delve into the world of astrology at our cosmic sanctuary in Rudrapur, guided by the expertise of Pandit Lalit Lohani. We pride ourselves on offering an array of specialized services, each rooted in authenticity and the sacred art of astrology, ensuring a transformative experience for all.",
+  "aboutSections": [
+    {
+      "serviceImg": "/aboutUsImg/handWriting.svg",
+      "serviceHeading": "Handwritten Horoscopes by Pandit Lalit Lohani",
+      "serviceDes": "Experience the uniqueness of 'hasthlikhit' horoscopes by Pandit Lohani, where each chart is a meticulously crafted masterpiece reflecting your life's celestial journey."
+    },
+    {
+      "serviceImg": "/aboutUsImg/questioncCart.webp",
+      "serviceHeading": "Prashna Kundali - Answers from the Cosmos",
+      "serviceDes": "Discover profound insights into life's questions with our Prashna Kundali service. Let the cosmic wisdom unfold the answers you seek."
+    },
+    {
+      "serviceImg": "/aboutUsImg/predictions.svg",
+      "serviceHeading": "Yearly Horoscope Predictions",
+      "serviceDes": "Prepare for the year ahead with insightful predictions. Our horoscopes offer guidance on various life aspects, helping you navigate towards success and happiness."
+    },
+    {
+      "serviceImg": "/aboutUsImg/horoscopeMatch.svg",
+      "serviceHeading": "Kundali Milan for Harmonious Relationships",
+      "serviceDes": "Ensure compatibility and harmony in relationships with our Kundali Milan service. Explore the depths of your partnership through our detailed astrological analysis."
+    },
+    {
+      "serviceImg": "/aboutUsImg/calculations.svg",
+      "serviceHeading": "Muhurta - Auspicious Timing Calculations",
+      "serviceDes": "Select the perfect timing for your significant events with our Muhurta calculations. Let the auspicious moments align for your success."
+    },
+    {
+      "serviceImg": "/aboutUsImg/birthChart.svg",
+      "serviceHeading": "In-Depth Birth Chart Analysis",
+      "serviceDes": "Gain comprehensive insights into your life with our detailed birth chart analysis. Our expert interpretations provide clarity and direction on various life matters."
+    },
+    {
+      "serviceImg": "/aboutUsImg/vastuDefect.webp",
+      "serviceHeading": "Vastu Shastra for Harmony and Prosperity",
+      "serviceDes": "Enhance the positive energies in your spaces with our Vastu Shastra services. Experience peace and prosperity by mitigating Vastu defects in homes and workplaces."
+    },
+    {
+      "serviceImg": "/aboutUsImg/stonService.svg",
+      "serviceHeading": "Gemstone Recommendations for Energy Harmonization",
+      "serviceDes": "Harness the power of gemstones with personalized recommendations from Pandit Lalit Lohani. Balance your energies and achieve your life goals with the right gemstones."
+    }
+  ],
+  "aboutBottomDes": "Astrolohani in Rudrapur, under the guidance of Pandit Lalit Lohani, offers a spectrum of astrological services designed to enlighten and transform. Our commitment to authenticity and deep astrological understanding ensures a unique and profound experience for every individual."
+}

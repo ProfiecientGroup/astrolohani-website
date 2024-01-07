@@ -1,0 +1,238 @@
+{
+  "bannerCarousel": [
+    {
+      "label": "Carousel 1",
+      "heading": "Vedic Kundali",
+      "title": "Your Destiny, Our Focus",
+      "des": "Unlock the secrets of your life's journey with a personalized Vedic Kundali chart.",
+      "bgBanner": "/homeImg/vedickundali.webp"
+    },
+    {
+      "label": "Carousel 2",
+      "heading": "Vastu Visit",
+      "title": "Create Heaven at Home with Vastu",
+      "des": "Bring harmony and positivity to your home through the ancient science of Vastu Shastra.",
+      "bgBanner": "/homeImg/vastuVisitBanner3.webp"
+    },
+    {
+      "label": "Carousel 1",
+      "heading": "Gemstone",
+      "title": "Radiance of Gemstones, Radiance in Life",
+      "des": "Experience the transformative power of gemstones and their influence on your life's journey.",
+      "bgBanner": "/homeImg/gemstoneBanner2.webp"
+    },
+    {
+      "label": "Carousel 2",
+      "heading": "Varshikfal",
+      "title": "Your Yearly Plan, Your Guiding Light",
+      "des": "Plan your year with wisdom from your personalized yearly horoscope.",
+      "bgBanner": "/homeImg/varshikfalBanner4.webp"
+    }
+  ],
+  "panditName": "About Pandit Lalit Lohani",
+  "panditDes": "Introducing Pandit Lalit Lohani, the beacon of wisdom in Rudrapur, Uttarakhand. With an impressive legacy spanning more than two and a half decades in the realm of astrolohani, Pandit Lahoni is your trusted navigator through life &apos;s celestial mysteries.",
+  "aboutWhatDO": "What Do We Do ?",
+  "aboutDes1": "Renowned for his Pure Handwritten (Hasth Likhit) horoscopes, precise horoscope matching, and insightful year forecasts, Pandit Lohani offers a guiding hand in the journey of life. His expertise extends to Muhurta calculations, astrology stone recommendations, kundali readings, varshik rashifal predictions, and more.",
+  "aboutDes2": "Whether you seek clarity in career, love, or life&apos;s diverse facets, Pandit Lalit Lohani&apos;s wisdom is your celestial compass, helping you navigate the stars and uncover the path to your destiny.",
+  "btnName": "Read More",
+  "appointmentName": "Booking & Appointment",
+  "horoscopeName": "Horoscope",
+  "panchangDes": "Unlocking Destiny with Handcrafted Vedic Astrology",
+  "liteData": [
+    {
+      "number": "Aries",
+      "text": "A, L, E",
+      "icon": "/homeImg/aries.svg",
+      "icon1": "/homeImg/aries1.svg",
+      "horoscopeDetails": "Aries, the first sign of the zodiac, is known for its bold and energetic nature. People born under this sign are natural leaders and love taking on new challenges."
+    },
+    {
+      "number": "Taurus",
+      "text": "B, V, U",
+      "icon": "/homeImg/taurus.svg",
+      "icon1": "/homeImg/taurus1.svg",
+      "horoscopeDetails": "Taureans are grounded and reliable. They value stability and comfort, often symbolized by the bull. Taurus individuals are practical and enjoy the finer things in life."
+    },
+    {
+      "number": "Gemini",
+      "text": "K, CH, GH, NG",
+      "icon": "/homeImg/gemini.svg",
+      "icon1": "/homeImg/gemini1.svg",
+      "horoscopeDetails": "Gemini, represented by the Twins, embodies duality. These individuals are known for their curious and adaptable personalities. They love communication and change."
+    },
+    {
+      "number": "Cancer",
+      "text": "D, DA, HA, G",
+      "icon": "/homeImg/cancer.svg",
+      "icon1": "/homeImg/cancer1.svg",
+      "horoscopeDetails": "Cancer, symbolized by the Crab, is deeply nurturing and intuitive. They're highly protective of their loved ones and have strong emotional connections."
+    },
+    {
+      "number": "Leo",
+      "text": "M, TA, THA",
+      "icon": "/homeImg/leo.svg",
+      "icon1": "/homeImg/leo1.svg",
+      "horoscopeDetails": "Leo, ruled by the Sun, exudes confidence and charisma. Leos are natural leaders with a warm and outgoing personality."
+    },
+    {
+      "number": "Virgo",
+      "text": "P, T, TH, NA",
+      "icon": "/homeImg/virgo.svg",
+      "icon1": "/homeImg/virgo1.svg",
+      "horoscopeDetails": "Virgos are meticulous and analytical, with an eye for detail. They're known for their practicality and problem-solving abilities."
+    },
+    {
+      "number": "Libra",
+      "text": "R, T, TH",
+      "icon": "/homeImg/libra.svg",
+      "icon1": "/homeImg/libra1.svg",
+      "horoscopeDetails": "Represented by the Scales, Libra is all about balance and harmony. They're social butterflies who appreciate beauty and diplomacy."
+    },
+    {
+      "number": "Scorpio",
+      "text": "N, Y, NA, YA",
+      "icon": "/homeImg/scorpio.svg",
+      "icon1": "/homeImg/scorpio1.svg",
+      "horoscopeDetails": "Scorpio is intense and passionate. Those born under this sign are often mysterious and have a strong sense of determination."
+    },
+    {
+      "number": "Sagittairus",
+      "text": "B, BH, DH, F",
+      "icon": "/homeImg/sagittairus.svg",
+      "icon1": "/homeImg/sagittairus1.svg",
+      "horoscopeDetails": "Sagittarians are adventurous and free-spirited. They love exploration and seek knowledge and new experiences."
+    },
+    {
+      "number": "Capricorn",
+      "text": "KH, J, KH, GA",
+      "icon": "/homeImg/capricorn.svg",
+      "icon1": "/homeImg/capricorn1.svg",
+      "horoscopeDetails": "Capricorns are ambitious and responsible. They're natural planners and are determined to achieve their goals."
+    },
+    {
+      "number": "Aquarius",
+      "text": "S, SH, SI",
+      "icon": "/homeImg/aquarius.svg",
+      "icon1": "/homeImg/aquarius1.svg",
+      "horoscopeDetails": "Aquarius, the Water Bearer, is forward-thinking and independent. They value innovation, individuality, and social causes."
+    },
+    {
+      "number": "Pisces",
+      "text": "D, CH, Z",
+      "icon": "/homeImg/pisces.svg",
+      "icon1": "/homeImg/pisces1.svg",
+      "horoscopeDetails": "Pisces is imaginative and empathetic. They have a deep connection to their emotions and often exhibit artistic and intuitive qualities."
+    }
+  ],
+  "ourServicesName": "Our Services",
+  "ourServicesDec": "Explore the Cosmic Blueprint of Your Life with Vedic Kundali, Craft Harmonious Spaces with Vastu Wisdom, Discover Gemstone Power, Gain Annual Cosmic Insights, Find Love with Celestial Matchmaking, and Elevate Moments with Auspicious Timings.",
+  "ourServicesTestimonialData": [
+    {
+      "label": "Carousel 1",
+      "serviceIcon1": "/homeImg/vedicKundaliServiceIco1.webp",
+      "title": "Vedic Astrology",
+      "des": "Unlock Your Destiny with Your Cosmic Birth Chart",
+      "serviceIcon2": "/homeImg/gemstoneServiceIcon2.webp",
+      "title2": "Gemstone",
+      "des2": "Discover the Power of Gemstones with Expert Guidance."
+    },
+    {
+      "label": "Carousel 2",
+      "serviceIcon1": "/homeImg/vastuvisitServiceIcon4.webp",
+      "title": "Vastu Visit",
+      "des": "Creating Positive Spaces with Vastu Expertise.",
+      "serviceIcon2": "/homeImg/varshikfalServiceIcon3.webp",
+      "title2": "Varshik Fal",
+      "des2": "Navigate the Year Ahead with Cosmic Insights."
+    },
+    {
+      "label": "Carousel 3",
+      "serviceIcon1": "/homeImg/partnerkundalimilanServiceIcon6.webp",
+      "title": "Kundali Milan ",
+      "des": "Find Your Cosmic Match for Lasting Relationships.",
+      "serviceIcon2": "/homeImg/muharatServiceIcon5.webp",
+      "title2": "Muhurat",
+      "des2": "Make Important Moments Shine with Auspicious Timings"
+    }
+  ],
+  "whyChooseUsText": "Why Choose Us",
+  "whyChooseUsDes": "Guiding Life's Journey with Trust and Expertise.",
+  "whyChooseUsData": [
+    { "count": 100, "title": "Trusted by Million Clients", "altTag": "client" },
+    {
+      "count": 70,
+      "title": "Services in Cities Across India",
+      "altTag": "cities"
+    },
+    {
+      "count": 25,
+      "title": "Countries Worldwide",
+      "altTag": "global"
+    },
+    { "count": 80, "title": "Vastu Visit", "altName": "vastu" },
+    { "count": 60, "title": "Industrial Explorations", "altName": "industry" }
+  ],
+  "testimonialTitle": "What clients are saying",
+  "testimonialDes": "Discover How We've Touched Lives. Words from Satisfied Cosmic Explorers.",
+  "mobileTestimonialData": [
+    {
+      "label": "Carousel 1",
+      "clientFeedback1": "Must visit guruji's center for a better experience. His knowledge in jyotish is the epitome, and you must take advantage of it. I personally recommend it",
+      "clientName1": "Hitesh sharma",
+      "clientImg1": "/homeImg/client1.svg"
+    },
+    {
+      "label": "Carousel 2",
+      "clientFeedback1": "Pandit Ji's predictions are very accurate and really helped me enhance my career and solve my problems",
+      "clientName1": "Hemdutt sharma",
+      "clientImg1": "/homeImg/client2.svg"
+    },
+    {
+      "label": "Carousel 3",
+      "clientFeedback1": "He is an expert in astro reading and really helped me solve my problems. Thank you, Guruji; your guidance really helped me",
+      "clientName1": "Hunny",
+      "clientImg1": "/homeImg/client3.svg"
+    }
+  ],
+  "testimonialData": [
+    {
+      "label": "Carousel 1",
+      "clientFeedback1": "Must visit guruji's center for a better experience. His knowledge in jyotish is the epitome, and you must take advantage of it. I personally recommend it",
+      "clientName1": "Hitesh sharma",
+      "clientImg1": "/homeImg/client1.svg",
+      "clientImg2": "/homeImg/client2.svg",
+      "clientName2": "Hemdutt sharma",
+      "clientFeedback2": "Pandit Ji's predictions are very accurate and really helped me enhance my career and solve my problems"
+    },
+    {
+      "label": "Carousel 2",
+      "clientFeedback1": "He is an expert in astro reading and really helped me solve my problems. Thank you, Guruji; your guidance really helped me",
+      "clientName1": "Hunny",
+      "clientImg1": "client3.src"
+    }
+  ],
+  "FAQText": "Frequently Asked Questions",
+  "FAQHeading": "Answers to Your Cosmic Queries.",
+  "accordionContent": {
+    "data": [
+      {
+        "id": "What is Vedic Kundali, and how can it benefit me?",
+        "content": [
+          "Vedic Kundali is a personalized birth chart that provides insights into various aspects of your life, including career, relationships, education, and more. It can help you make informed decisions and navigate life's challenges"
+        ]
+      },
+      {
+        "id": "How does Vastu Shastra expertise help improve living and working spaces?",
+        "content": [
+          "Vastu Shastra expertise involves assessing and enhancing the energy flow in spaces. It can create more harmonious and prosperous environments by aligning them with cosmic energies."
+        ]
+      },
+      {
+        "id": " What is the significance of visiting Guruji's astrology center in person?",
+        "content": [
+          "Visiting Guruji's center in person offers a more immersive and personalized experience, allowing you to directly consult with him and benefit from his extensive knowledge in jyotish (astrology)."
+        ]
+      }
+    ]
+  }
+}
