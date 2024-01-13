@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { Accordion as MuiAccordion, AccordionSummary as MuiAccordionSummary, AccordionDetails as MuiAccordionDetails, Typography, styled } from "@mui/material";
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
+import MuiAccordionSummary, {
+  AccordionSummaryProps,
+} from "@mui/material/AccordionSummary";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { Data } from "../../../models/interface";
-import { homeStyles } from "../Home.styles";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import { useEffect } from "react";
+import homeStyles from "../Home.styles";
 
-const Accordion = styled((props) => (
+const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
@@ -17,27 +23,35 @@ const Accordion = styled((props) => (
   },
 }));
 
+interface CustomProps {
+  // data?: Data[];
+  data?: any[];
+}
+
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-const HomeAccordion = (props) => {
+const HomeAccordion = (props: CustomProps) => {
   const classes = homeStyles;
-  const [expanded, setExpanded] = useState(props.data?.length ? props.data[0].id : "");
+  const [expanded, setExpanded] = React.useState<string | false>(
+    props.data?.length ? props.data[0].id : ""
+  );
 
   useEffect(() => {
     setExpanded(props.data?.length ? props.data[0].id : "");
   }, [props.data]);
 
-  const handleChange = (id) => (event, newExpanded) => {
-    setExpanded(newExpanded ? id : false);
-  };
+  const handleChange =
+    (id: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+      setExpanded(newExpanded ? id : false);
+    };
 
   return (
     <>
-      {props.data?.map((item, index) => {
-        const AccordionSummary = styled((props) => (
+      {props.data?.map((item, index: number) => {
+        const AccordionSummary = styled((props: AccordionSummaryProps) => (
           <MuiAccordionSummary
             expandIcon={
               expanded === item.id ? (
@@ -91,11 +105,13 @@ const HomeAccordion = (props) => {
               <Typography sx={classes.solutionTitle}>{item.id}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {item.content.map((description, index) => (
-                <Typography sx={classes.accordianDescription} key={index}>
-                  {description}
-                </Typography>
-              ))}
+              {item.content.map((description: any, index: number) => {
+                return (
+                  <Typography sx={classes.accordianDescription} key={index}>
+                    {description}
+                  </Typography>
+                );
+              })}
             </AccordionDetails>
           </Accordion>
         );
@@ -103,5 +119,4 @@ const HomeAccordion = (props) => {
     </>
   );
 };
-
 export default HomeAccordion;

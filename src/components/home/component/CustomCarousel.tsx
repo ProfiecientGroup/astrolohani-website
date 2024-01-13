@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
 import {
   Box,
   Button,
@@ -10,27 +7,33 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import { useState } from "react";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
+import homeStyles from "../Home.styles";
+import { centerItemFlex } from "../../../styles/styles";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import { centerItemFlex } from "../../../styles/styles";
+import { bannerCarousel } from "../HomeData";
 import urls from "../../../global/constants/urls";
-import Link from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+import { Link } from "react-router-dom";
 
 const CustomCarousel = () => {
+  const classes = homeStyles;
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
   const { t } = useTranslation("home");
-  const bannerCarouselTranslation = t("bannerCarousel", { returnObjects: true }) || [];
-  const bannerCarousel = Array.isArray(bannerCarouselTranslation)
+  const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+  const bannerCarouselTranslation: any =
+    t("bannerCarousel", { returnObjects: true }) || [];
+  const bannerCarousel: any[] = Array.isArray(bannerCarouselTranslation)
     ? bannerCarouselTranslation
     : [];
   const maxSteps = bannerCarousel.length;
 
-  const handleStepChange = (step) => {
+  const handleStepChange = (step: number) => {
     setActiveStep(step);
   };
 
@@ -53,15 +56,16 @@ const CustomCarousel = () => {
             enableMouseEvents
             interval={9500}
           >
-            {bannerCarousel?.map((step, index) => (
+            {bannerCarousel?.map((step: any, index: number) => (
               <Box key={step.label}>
                 {Math.abs(activeStep - index + 1) <= 1 && (
                   <Box
-                    style={{
-                      backgroundImage: `url(${step.bgBanner})`,
+                    sx={{
+                      backgroundImage: "url(" + step.bgBanner + ")",
                       height: "600px",
                       backgroundSize: "cover",
                       backgroundRepeat: "no-repeat",
+                      // backgroundPosition: "center",
                       width: "auto",
                       overflow: "hidden",
                       backgroundColor: "#FFFFFF",
@@ -73,7 +77,7 @@ const CustomCarousel = () => {
                       <Button
                         size="small"
                         onClick={handleBack}
-                        style={{
+                        sx={{
                           cursor: "pointer",
                           borderRadius: "50px",
                           background: "rgba(255, 255, 255, 0.30)",
@@ -81,6 +85,21 @@ const CustomCarousel = () => {
                           height: "50px",
                           marginLeft: 3,
                           minWidth: "50px",
+                          svg: {
+                            color: activeStep === 0 ? "gray" : "#FF7E00",
+                            cursor: "pointer",
+                            width: "30px",
+                            height: "30px",
+                          },
+                          "&:focus": {
+                            color: activeStep === 0 ? "gray" : "#FF7E00",
+                            backgroundColor: "#f9fcff",
+                          },
+                          "&:hover": {
+                            color: activeStep === 0 ? "gray" : "#FF7E00",
+                            backgroundColor: "#f9fcff",
+                          },
+                          transition: "all ease 2s",
                         }}
                         disabled={activeStep === 0}
                       >
@@ -89,28 +108,30 @@ const CustomCarousel = () => {
                     )}
                     <Container
                       maxWidth="sm"
-                      style={{
+                      sx={{
                         "&.MuiContainer-root": {
                           marginLeft: "50px",
                         },
                       }}
                     >
                       <Stack direction="column">
-                        <Typography gutterBottom style={classes.bannerDes}>
+                        <Typography gutterBottom sx={classes.bannerDes}>
                           {step.heading}
                         </Typography>
-                        <Typography style={classes.bannerTitle} gutterBottom>
+                        <Typography sx={classes.bannerTitle} gutterBottom>
                           {step.title}
                         </Typography>
-                        <Typography gutterBottom style={classes.bannerDes}>
+                        <Typography gutterBottom sx={classes.bannerDes}>
                           {step.des}
                         </Typography>
-                        <Link to={urls.contactUsViewPath}>
-                          <Box style={classes.bannerBtn}>
-                            <Typography style={classes.btnText}>
-                              Appointment
-                            </Typography>
-                          </Box>
+                        <Link to={urls.contactUsViewPath} >
+                          <a target="_target">
+                            <Box sx={classes.bannerBtn}>
+                              <Typography sx={classes.btnText}>
+                                Appointment
+                              </Typography>
+                            </Box>
+                          </a>
                         </Link>
                       </Stack>
                     </Container>
@@ -119,7 +140,7 @@ const CustomCarousel = () => {
                         size="small"
                         onClick={handleNext}
                         disabled={activeStep === maxSteps - 1}
-                        style={{
+                        sx={{
                           cursor: "pointer",
                           borderRadius: "50px",
                           background: "rgba(255, 255, 255, 0.30)",
@@ -127,6 +148,22 @@ const CustomCarousel = () => {
                           height: "50px",
                           marginRight: 3,
                           minWidth: "50px",
+                          svg: {
+                            color:
+                              activeStep === maxSteps - 1 ? "gray" : "#FF7E00",
+                            cursor: "pointer",
+                            width: "30px",
+                            height: "30px",
+                          },
+                          "&:focus": {
+                            color: activeStep === 0 ? "gray" : "#FF7E00",
+                            backgroundColor: "#f9fcff",
+                          },
+                          "&:hover": {
+                            color: activeStep === 0 ? "gray" : "#FF7E00",
+                            backgroundColor: "#f9fcff",
+                          },
+                          transition: "all ease 0.5s",
                         }}
                       >
                         <KeyboardArrowRightRoundedIcon />
@@ -144,5 +181,4 @@ const CustomCarousel = () => {
     </>
   );
 };
-
 export default CustomCarousel;
