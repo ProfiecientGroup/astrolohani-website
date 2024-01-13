@@ -115,10 +115,10 @@ const AppHeader = (props: CustomProps) => {
     currentlyHovering2 = true;
   }
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchor(null);
     setMenuMobileVisible(false);
-  }
+  };
 
   const handleMenuMobileVisibility = (event: any) => {
     setMenuMobileVisible(event.currentTarget);

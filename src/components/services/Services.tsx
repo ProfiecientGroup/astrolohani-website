@@ -6,9 +6,13 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 import { servicesStyles } from "./services.styles";
-import { getRelativeFontSize, latoMediumFont, theme } from "../../styles/styles";
+import {
+  getRelativeFontSize,
+  latoMediumFont,
+  theme,
+} from "../../styles/styles";
 import { useTranslation } from "react-i18next";
 
 export interface CustomProps {
@@ -44,17 +48,6 @@ const Services = (props: CustomProps) => {
     return (
       <>
         <Box sx={classes.panchangMain}>
-        <helmet>
-                <link rel="canonical" href="https://www.astrolohani.com/services/" />
-        <title>
-          Astrolohani Services | Illuminate Your Cosmic Journey | Astrology Now
-        </title>
-        <meta
-          name="description"
-          content="Explore our astrology services curated under the expert guidance of Pandit Lalit Lohani. Unlock the secrets of your cosmic journey with Vedic Kundali, create positive spaces with Vastu Visit, discover the power of gemstones, navigate the year ahead with Varshik Fal, find lasting relationships through Horoscope Matching, and make important moments shine with Muhurat Suggestions."
-        />
-
-        </helmet>
           <Container maxWidth="md" sx={{ textAlign: "center" }}>
             <Stack
               direction="column"
@@ -74,28 +67,28 @@ const Services = (props: CustomProps) => {
                   style={{ marginBottom: 15 }}
                 /> */}
             </Stack>
-           <Grid container spacing={3}>
-                {props.servicesData?.map((item: any, index: number) => {
-                  return (
-                    <Grid item md={12} lg={12} xs={12} sm={12} key={index}>
-                      <Box key={index}>
-                        <img
-                          src={item.serviceImg}
-                          alt={item.altTagName}
-                          width="100%"
-                          height="100%"
-                          style={{ marginBottom: 25 }}
-                        />
-                        <Box
-                          display="flex"
-                          alignItems="center"
-                          mb={1}
-                          textAlign="start"
-                        >
-                          <Typography sx={classes.serviceHeading}>
-                            {item.serviceHeading}
-                          </Typography>{" "}
-                          {/* {isDesktop && (
+            <Grid container spacing={3}>
+              {props.servicesData?.map((item: any, index: number) => {
+                return (
+                  <Grid item md={12} lg={12} xs={12} sm={12} key={index}>
+                    <Box key={index}>
+                      <img
+                        src={item.serviceImg}
+                        alt={item.altTagName}
+                        width="100%"
+                        height="100%"
+                        style={{ marginBottom: 25 }}
+                      />
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        mb={1}
+                        textAlign="start"
+                      >
+                        <Typography sx={classes.serviceHeading}>
+                          {item.serviceHeading}
+                        </Typography>{" "}
+                        {/* {isDesktop && (
                               <img
                                 src={horizontalLine.src}
                                 style={{
@@ -105,51 +98,51 @@ const Services = (props: CustomProps) => {
                                 }}
                               />
                             )} */}
-                        </Box>
-                        {item.serviceDes?.map((description: any) => {
-                          return (
-                            <Typography
-                              key="Description"
-                              component="div"
-                              sx={classes.aboutDes}
-                            >
-                              {description}
-                            </Typography>
-                          );
-                        })}
-                        {item.keyFeatures?.map((i: any, keyIndex: number) => {
-                          return (
-                            <Typography
-                              sx={classes.subHeading}
-                              textAlign="justify"
-                              key={keyIndex}
-                            >
-                              {keyIndex + 1}. {i.subHeading} :{" "}
-                              <span
-                                style={{
-                                  ...latoMediumFont,
-                                  color: "#565656",
-                                  fontSize: getRelativeFontSize(2),
-                                  textAlign: "justify",
-                                }}
-                              >
-                                {i.subDescription}
-                              </span>
-                            </Typography>
-                          );
-                        })}
-                        <Typography
-                          key="Description"
-                          component="div"
-                          sx={classes.aboutDes}
-                        >
-                          {item.wrapUp}
-                        </Typography>
                       </Box>
-                    </Grid>
-                  );
-                })}
-              </Grid> 
+                      {item.serviceDes?.map((description: any) => {
+                        return (
+                          <Typography
+                            key="Description"
+                            component="div"
+                            sx={classes.aboutDes}
+                          >
+                            {description}
+                          </Typography>
+                        );
+                      })}
+                      {item.keyFeatures?.map((i: any, keyIndex: number) => {
+                        return (
+                          <Typography
+                            sx={classes.subHeading}
+                            textAlign="justify"
+                            key={keyIndex}
+                          >
+                            {keyIndex + 1}. {i.subHeading} :{" "}
+                            <span
+                              style={{
+                                ...latoMediumFont,
+                                color: "#565656",
+                                fontSize: getRelativeFontSize(2),
+                                textAlign: "justify",
+                              }}
+                            >
+                              {i.subDescription}
+                            </span>
+                          </Typography>
+                        );
+                      })}
+                      <Typography
+                        key="Description"
+                        component="div"
+                        sx={classes.aboutDes}
+                      >
+                        {item.wrapUp}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                );
+              })}
+            </Grid>
           </Container>
         </Box>
       </>
@@ -158,6 +151,16 @@ const Services = (props: CustomProps) => {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://www.astrolohani.com/services/" />
+        <title>
+          Astrolohani Services | Illuminate Your Cosmic Journey | Astrology Now
+        </title>
+        <meta
+          name="description"
+          content="Explore our astrology services curated under the expert guidance of Pandit Lalit Lohani. Unlock the secrets of your cosmic journey with Vedic Kundali, create positive spaces with Vastu Visit, discover the power of gemstones, navigate the year ahead with Varshik Fal, find lasting relationships through Horoscope Matching, and make important moments shine with Muhurat Suggestions."
+        />
+      </Helmet>
       {serviceCustomCarousel()}
       {servicesSection()}
     </>

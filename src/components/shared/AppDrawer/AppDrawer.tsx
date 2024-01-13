@@ -28,17 +28,15 @@ const AppDrawer = (props: CustomProps) => {
   const getLogo = () => {
     return (
       <Box mt={6} style={{ display: "flex", justifyContent: "center" }}>
-        <Link to={urls.homePathView} >
-          <a href={urls.homePathView} rel="noreferrer">
-            <img
-              src={logo}
-              alt="astroLohani"
-              height={isDesktop ? "60px" : "50px"}
-              style={{
-                cursor: "pointer",
-              }}
-            />
-          </a>
+        <Link to={urls.homePathView} style={{ textDecoration: "none" }}>
+          <img
+            src={logo}
+            alt="astroLohani"
+            height={isDesktop ? "60px" : "50px"}
+            style={{
+              cursor: "pointer",
+            }}
+          />
         </Link>
       </Box>
     );
@@ -61,15 +59,16 @@ const AppDrawer = (props: CustomProps) => {
       <Stack direction="column" alignItems="center" spacing={3}>
         <Stack direction={"row"} gap={1} alignItems="center">
           <img src={call} alt="phone" height="15px" width="15px" />
-          <Typography sx={classes.regularFont}>
-            <a href={`tel:${strings.CONTACT}`}>{strings.CONTACT}</a>
-          </Typography>
+          <Link to={`tel:${strings.CONTACT}`} style={{ textDecoration: "none" }}>
+            <Typography sx={classes.regularFont}>{strings.CONTACT}</Typography>
+          </Link>
         </Stack>
         <Stack direction={"row"} gap={1} alignItems="center">
           <img src={mail} alt="mail" height="15px" width="15px" />
-          <Typography sx={classes.regularFont}>
-            <a href={`mailto:${strings.SUPPORT}`}>{strings.SUPPORT}</a>
-          </Typography>
+
+          <Link to={`mailto:${strings.SUPPORT}`} style={{ textDecoration: "none" }}>
+            <Typography sx={classes.regularFont}>{strings.SUPPORT}</Typography>
+          </Link>
         </Stack>
         <Stack direction="row">
           <Typography sx={classes.regularFont} textAlign="center">

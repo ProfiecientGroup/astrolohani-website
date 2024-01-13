@@ -51,26 +51,6 @@ const HomeComponent = () => {
 
     setIsPlaying(!isPlaying);
   };
-  <helmet>
-          <link rel="canonical" href="https://www.astrolohani.com/" />
-        <title>
-          Astrolohani - Your Gateway to Vedic Astrology and Spiritual Insights
-        </title>
-        <meta
-          name="description"
-          content="Experience the transformative power of Vedic astrology at astrolohani. Get insights into your life's journey, improve spaces with Vastu expertise, discover the radiance of gemstones, navigate the year ahead with annual predictions, and find lasting relationships through horoscope matching."
-        />
-        <meta
-          name="keywords"
-          content="astrolohani, best astrologer in rudrapur , best astrologer in uttrakhand, pandit lalit lohani,Vedic astrology, astrology services, horoscope matching, gemstone recommendations, Vastu Shastra, annual predictions, astrologer in Rudrapur, Kundali analysis, cosmic guidance, spiritual insights"
-        />
-        <meta property="og:title" content="Astrolohani - Your Trusted Astrologer" />
-        <meta property="og:description" content="Unlock the secrets of your life's journey with personalized Vedic Kundali charts." />
-        <meta
-          property="og:image"
-          content="https://cdn.astrolohani.com/astrolohani/astrolohani-og-image.png"
-        />
-  </helmet>
 
   const aboutSection = () => {
     return (
@@ -600,6 +580,32 @@ const HomeComponent = () => {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://www.astrolohani.com/" />
+        <title>
+          Astrolohani - Your Gateway to Vedic Astrology and Spiritual Insights
+        </title>
+        <meta
+          name="description"
+          content="Experience the transformative power of Vedic astrology at astrolohani. Get insights into your life's journey, improve spaces with Vastu expertise, discover the radiance of gemstones, navigate the year ahead with annual predictions, and find lasting relationships through horoscope matching."
+        />
+        <meta
+          name="keywords"
+          content="astrolohani, best astrologer in rudrapur , best astrologer in uttrakhand, pandit lalit lohani,Vedic astrology, astrology services, horoscope matching, gemstone recommendations, Vastu Shastra, annual predictions, astrologer in Rudrapur, Kundali analysis, cosmic guidance, spiritual insights"
+        />
+        <meta
+          property="og:title"
+          content="Astrolohani - Your Trusted Astrologer"
+        />
+        <meta
+          property="og:description"
+          content="Unlock the secrets of your life's journey with personalized Vedic Kundali charts."
+        />
+        <meta
+          property="og:image"
+          content="https://cdn.astrolohani.com/astrolohani/astrolohani-og-image.png"
+        />
+      </Helmet>
       <Box sx={classes.homeMain}>
         <CustomCarousel />
         {aboutSection()}
