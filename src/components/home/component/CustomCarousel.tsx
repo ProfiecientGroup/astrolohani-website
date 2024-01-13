@@ -124,14 +124,16 @@ const CustomCarousel = () => {
                         <Typography gutterBottom sx={classes.bannerDes}>
                           {step.des}
                         </Typography>
-                        <Link to={urls.contactUsViewPath} >
-                          <a target="_target">
-                            <Box sx={classes.bannerBtn}>
-                              <Typography sx={classes.btnText}>
-                                Appointment
-                              </Typography>
-                            </Box>
-                          </a>
+                        <Link
+                          to={urls.contactUsViewPath}
+                          target="_blank"
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Box sx={classes.bannerBtn}>
+                            <Typography sx={classes.btnText}>
+                              Appointment
+                            </Typography>
+                          </Box>
                         </Link>
                       </Stack>
                     </Container>

@@ -27,7 +27,8 @@ import facebook from "../../../assets/icons/footerIcon/facebook.svg";
 import instagram from "../../../assets/icons/footerIcon/instagram.svg";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link } from "react-router-dom";
-import { startTransition } from 'react';
+import { startTransition } from "react";
+import { isActiveTab } from "../../helpers/methods";
 
 interface CustomProps {
   toggleDrawer: Function;
@@ -155,17 +156,17 @@ const AppHeader = (props: CustomProps) => {
   const getNavMenu = () => {
     return (
       <List sx={classes.navMenuMain}>
-        <Link to={urls.homePathView}>
+        <Link to={urls.homePathView} style={{ textDecoration: "none" }}>
           {/* <a href={urls.homePathView} rel="noreferrer"> */}
-            <ListItem
-              sx={[
-                classes.navBtn,
-                // isActiveTab(urls.homePathView) && classes.selected,
-              ]}
-              onClick={() => setMenuMobileVisible(false)}
-            >
-              Home
-            </ListItem>
+          <ListItem
+            sx={[
+              classes.navBtn,
+              isActiveTab(urls.homePathView) && classes.selected,
+            ]}
+            onClick={() => setMenuMobileVisible(false)}
+          >
+            Home
+          </ListItem>
           {/* </a> */}
         </Link>
         <Divider
@@ -176,18 +177,16 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <Link to={urls.aboutUsPathView}>
-          <a href={urls.aboutUsPathView} rel="noreferrer">
-            <ListItem
-              sx={[
-                classes.navBtn,
-                // isActiveTab(urls.aboutUsPathView) && classes.selected,
-              ]}
-              onClick={() => setMenuMobileVisible(false)}
-            >
-              About
-            </ListItem>
-          </a>
+        <Link to={urls.aboutUsPathView} style={{ textDecoration: "none" }}>
+          <ListItem
+            sx={[
+              classes.navBtn,
+              isActiveTab(urls.aboutUsPathView) && classes.selected,
+            ]}
+            onClick={() => setMenuMobileVisible(false)}
+          >
+            About
+          </ListItem>
         </Link>
         <Divider
           orientation="vertical"
@@ -205,14 +204,17 @@ const AppHeader = (props: CustomProps) => {
           }}
           onMouseOver={(e: any) => handleClick(e, serviceData)}
           onMouseLeave={handleCloseHover}
-          sx={classes.navBtn}
+          sx={{ ...classes.navBtn, lineHeight: 0 }}
         >
           <Typography
             sx={[
               classes.navBtn,
-              // router.pathname.includes(urls.servicesViewPath) &&
-              //   classes.selected,
+              window.location.pathname.includes(urls.servicesViewPath) &&
+                classes.selected,
             ]}
+            style={{
+              lineHeight: 0,
+            }}
           >
             Services
           </Typography>
@@ -253,24 +255,18 @@ const AppHeader = (props: CustomProps) => {
           }}
         >
           {menuData.map((item: any, index: number) => (
-            <Link to={item.path} key={index}>
-              <a>
-                <MenuItem
-                  key={index}
-                  onClick={handleClose}
-                  sx={classes.saviynt}
+            <Link to={item.path} key={index} style={{ textDecoration: "none" }}>
+              <MenuItem key={index} onClick={handleClose} sx={classes.saviynt}>
+                <Typography
+                  variant="h6"
+                  sx={[
+                    classes.saviynt,
+                    isActiveTab(item.path) && classes.selected,
+                  ]}
                 >
-                  <Typography
-                    variant="h6"
-                    sx={[
-                      classes.saviynt,
-                      // isActiveTab(item.path) && classes.selected,
-                    ]}
-                  >
-                    {item.title}
-                  </Typography>
-                </MenuItem>
-              </a>
+                  {item.title}
+                </Typography>
+              </MenuItem>
             </Link>
           ))}
         </Menu>
@@ -282,18 +278,16 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <Link to={urls.contactUsViewPath}>
-          <a href={urls.contactUsViewPath} rel="noreferrer">
-            <ListItem
-              sx={[
-                classes.navBtn,
-                // isActiveTab(urls.contactUsViewPath) && classes.selected,
-              ]}
-              onClick={() => setMenuMobileVisible(false)}
-            >
-              Contact
-            </ListItem>
-          </a>
+        <Link to={urls.contactUsViewPath} style={{ textDecoration: "none" }}>
+          <ListItem
+            sx={[
+              classes.navBtn,
+              isActiveTab(urls.contactUsViewPath) && classes.selected,
+            ]}
+            onClick={() => setMenuMobileVisible(false)}
+          >
+            Contact
+          </ListItem>
         </Link>
       </List>
     );

@@ -178,17 +178,17 @@ const homeStyles = {
       width: "auto",
       height: "auto",
     },
-    "&:hover": {
-      // transform: "scale(1.1)",
-      backgroundColor: "#272C65",
-      // transition: "all ease 1s",
-      "& .hoverEffect": {
-        color: "#FFFFFF",
-        boxShadow: "none",
-        // background: "#272C65",
-        // transform: "scale(1.1)",
-      },
-    },
+    // "&:hover": {
+    //   // transform: "scale(1.1)",
+    //   backgroundColor: "#272C65",
+    //   // transition: "all ease 1s",
+    //   "& .hoverEffect": {
+    //     color: "#FFFFFF",
+    //     boxShadow: "none",
+    //     // background: "#272C65",
+    //     // transform: "scale(1.1)",
+    //   },
+    // },
   },
   circleStyle: {
     borderRadius: "56px",
@@ -376,7 +376,6 @@ const homeStyles = {
     ...centerItemFlex,
     height: "140px",
     width: "135px",
-
     borderRadius: "9px",
     background: "#FFF",
     position: "absolute",
@@ -394,7 +393,7 @@ const homeStyles = {
     transform: "rotateY(180deg)",
     position: "absolute",
     backfaceVisibility: "hidden",
-    padding: 1,
+    padding: 0.2,
     [theme.breakpoints.down("md")]: {
       height: "180px",
       width: "110px",
