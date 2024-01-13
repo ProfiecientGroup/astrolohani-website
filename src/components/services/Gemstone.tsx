@@ -21,6 +21,15 @@ import {
   
     return (
       <>
+             <Helmet>
+        <link rel="canonical" href="https://www.astrolohani.com/services/" />
+        <title>
+Elevate Your Energies with Astrolohani's Gemstone Remedies in Rudrapur, Uttarakhand        </title>
+        <meta
+          name="description"
+    content =  "Discover cosmic balance with Astrolohani's Gemstone Recommendations and Sales service. Handpicked for your Kundali, each gem is a cosmic companion, enhancing strengths, mitigating challenges, and harmonizing your energies. Trust Pandit Lahoni's 25 years of astrological mastery for a transformative journey amidst the mystical Himalayas in Rudrapur. Your cosmic remedies await—embrace the power of gemstones with Astrolohani.",
+        />
+      </Helmet>
         <Services
           bannerHeading={t("bannerHeading")}
           bannerDescription={t("bannerDescription")}
