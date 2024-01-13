@@ -163,7 +163,10 @@ const AppHeader = (props: CustomProps) => {
               classes.navBtn,
               isActiveTab(urls.homePathView) && classes.selected,
             ]}
-            onClick={() => setMenuMobileVisible(false)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuMobileVisible(false);
+            }}
           >
             Home
           </ListItem>
@@ -183,7 +186,10 @@ const AppHeader = (props: CustomProps) => {
               classes.navBtn,
               isActiveTab(urls.aboutUsPathView) && classes.selected,
             ]}
-            onClick={() => setMenuMobileVisible(false)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuMobileVisible(false);
+            }}
           >
             About
           </ListItem>
@@ -199,7 +205,8 @@ const AppHeader = (props: CustomProps) => {
         <ListItem
           aria-owns={anchor ? "simple-menu" : undefined}
           aria-haspopup="true"
-          onClick={(e: any) => {
+          onClick={(e) => {
+            e.stopPropagation();
             handleClick(e, serviceData);
           }}
           onMouseOver={(e: any) => handleClick(e, serviceData)}
@@ -256,16 +263,14 @@ const AppHeader = (props: CustomProps) => {
         >
           {menuData.map((item: any, index: number) => (
             <Link to={item.path} key={index} style={{ textDecoration: "none" }}>
-              <MenuItem key={index} onClick={handleClose} sx={classes.saviynt}>
-                <Typography
-                  variant="h6"
-                  sx={[
-                    classes.saviynt,
-                    isActiveTab(item.path) && classes.selected,
-                  ]}
-                >
-                  {item.title}
-                </Typography>
+              <MenuItem
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleClose();
+                }}
+                sx={classes.saviynt}
+              >
+                <Typography    sx={classes.saviynt}>{item.title}</Typography>
               </MenuItem>
             </Link>
           ))}
@@ -284,7 +289,10 @@ const AppHeader = (props: CustomProps) => {
               classes.navBtn,
               isActiveTab(urls.contactUsViewPath) && classes.selected,
             ]}
-            onClick={() => setMenuMobileVisible(false)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuMobileVisible(false);
+            }}
           >
             Contact
           </ListItem>

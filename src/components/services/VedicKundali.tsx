@@ -27,8 +27,7 @@ const VedicKundali = () => {
         </title>
         <meta
           name="description"
-          content= "Uncover the cosmic tapestry of your life's journey with Astrolohani's personalized Vedic Kundali service. Explore career paths, love life, marriage prospects, educational pursuits, and more with a celestial life storybook tailored just for you.",
-/>
+          content= "Uncover the cosmic tapestry of your life's journey with Astrolohani's personalized Vedic Kundali service. Explore career paths, love life, marriage prospects, educational pursuits, and more with a celestial life storybook tailored just for you."/>
       </Helmet>
       <Services
         bannerHeading={t("bannerHeading")}

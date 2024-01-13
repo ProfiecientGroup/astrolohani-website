@@ -67,7 +67,7 @@ const OurServicesTestimonial = () => {
                 <Stack direction="column" spacing={2}>
                   <Box
                     sx={{
-                      height: "auto",
+                      height: "276px",
                       width: "200px",
                       overflow: "hidden",
                       backgroundColor: "#FFFFFF",
@@ -151,7 +151,7 @@ const OurServicesTestimonial = () => {
           <Stack direction="column" spacing={2}>
             <Box
               sx={{
-                height: "200px",
+                height: "276px",
                 width: "200px",
                 overflow: "hidden",
                 backgroundColor: "#FFFFFF",
@@ -178,7 +178,7 @@ const OurServicesTestimonial = () => {
             </Box>
             <Box
               sx={{
-                height: "200px",
+                height: "276px",
                 width: "200px",
                 overflow: "hidden",
                 backgroundColor: "#FFFFFF",

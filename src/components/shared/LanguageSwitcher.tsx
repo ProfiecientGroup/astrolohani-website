@@ -2,7 +2,7 @@ import React from "react";
 import { InputAdornment, MenuItem, OutlinedInput, Select } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import i18n from "../../i18n";
-import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
+import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
 
 const ITEM_HEIGHT = 40;
 const ITEM_PADDING_TOP = 8;
@@ -20,8 +20,9 @@ const MenuProps = {
 const LanguageSwitcher = () => {
   const location = useLocation();
 
-  const changeLanguage = (lng:any) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = (e: any) => {
+    e.stopPropagation();
+    i18n.changeLanguage(e.target.value);
   };
 
   return (
@@ -30,7 +31,7 @@ const LanguageSwitcher = () => {
         id="language"
         name="language"
         value={i18n.language} // Set to current language
-        onChange={(e) => changeLanguage(e.target.value)} // Pass only the language value
+        onChange={(e) => changeLanguage(e)} // Pass only the language value
         input={
           <OutlinedInput
             startAdornment={

@@ -27,8 +27,7 @@ import {
         </title>
         <meta
           name="description"
-    content =  "Prepare for the upcoming year with Astrolohani's Varshik Fal service, offering a cosmic preview into the script of your life's next chapter. Led by Pandit Lahoni's 25 years of expertise, this personalized journey in Rudrapur unfolds a celestial roadmap, guiding you through the twists and turns of the coming year with clarity and foresight.",
-        />
+    content =  "Prepare for the upcoming year with Astrolohani's Varshik Fal service, offering a cosmic preview into the script of your life's next chapter. Led by Pandit Lahoni's 25 years of expertise, this personalized journey in Rudrapur unfolds a celestial roadmap, guiding you through the twists and turns of the coming year with clarity and foresight."/>
       </Helmet>
         <Services
           bannerHeading={t("bannerHeading")}
