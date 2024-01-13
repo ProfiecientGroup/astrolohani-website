@@ -164,7 +164,7 @@ const AppHeader = (props: CustomProps) => {
               isActiveTab(urls.homePathView) && classes.selected,
             ]}
             onClick={(e) => {
-              e.stopPropagation();
+              // e.stopPropagation();
               setMenuMobileVisible(false);
             }}
           >
@@ -187,7 +187,7 @@ const AppHeader = (props: CustomProps) => {
               isActiveTab(urls.aboutUsPathView) && classes.selected,
             ]}
             onClick={(e) => {
-              e.stopPropagation();
+              // e.stopPropagation();
               setMenuMobileVisible(false);
             }}
           >
@@ -265,7 +265,7 @@ const AppHeader = (props: CustomProps) => {
             <Link to={item.path} key={index} style={{ textDecoration: "none" }}>
               <MenuItem
                 onClick={(e) => {
-                  e.stopPropagation();
+                  // e.stopPropagation();
                   handleClose();
                 }}
                 sx={classes.saviynt}
@@ -290,7 +290,7 @@ const AppHeader = (props: CustomProps) => {
               isActiveTab(urls.contactUsViewPath) && classes.selected,
             ]}
             onClick={(e) => {
-              e.stopPropagation();
+              // e.stopPropagation();
               setMenuMobileVisible(false);
             }}
           >
