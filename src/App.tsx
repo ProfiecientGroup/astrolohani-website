@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Box } from "@mui/material";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeComponent from "./components/home/Home";
@@ -7,16 +7,16 @@ import AboutUs from "./components/aboutUs/AboutUs";
 
 const App = () => {
   return (
-    <Box>
+    <Suspense fallback={<div>Loading...</div>}>
       <Router>
         <Layout>
           <Routes>
-            <Route path="/" Component={HomeComponent} />
-            <Route path="/about-us" Component={AboutUs} />
+            <Route path="/" element={<HomeComponent />} />
+            <Route path="/about-us" element={<AboutUs />} />
           </Routes>
         </Layout>
       </Router>
-    </Box>
+    </Suspense> 
   );
 };
 
