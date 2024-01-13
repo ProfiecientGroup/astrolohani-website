@@ -6,6 +6,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { Helmet } from "react-helmet";
 import panditLlalitPic from "../../assets/images/aboutUs/panditLalitPic.webp";
 import { aboutUsStyles } from "./AboutUs.styles";
 import aboutIcon from "../../assets/images/home/aboutIcon.webp";
@@ -22,6 +23,13 @@ const AboutUs = () => {
     return (
       <>
         <Box position="relative" padding="60px 0 0 10px">
+        <helmet>
+        <link rel="canonical" href="https://www.astrolohani.com/about-us/" />
+        {/* <title>About Us | astrolohani</title>
+        <meta name="description" content="" /> */}
+        <title>Pandit Lalit Lohani - Renowned Astrologer in Rudrapur | Astrolohani</title>
+        <meta name="description" content="Join Pandit Lalit Lohani at Astrolohani for a journey into the heart of Vedic astrology in Rudrapur. With over 25 years of experience, Pandit Lohani offers personalized horoscopes, Vastu consultation, and more, set against the spiritual backdrop of the Himalayas." />
+        </helmet>
           <Box display="flex" justifyContent="flex-end">
             <img
               src={panditLlalitPic}

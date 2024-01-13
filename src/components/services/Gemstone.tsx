@@ -6,12 +6,14 @@ import {
     Typography,
     useMediaQuery,
   } from "@mui/material";
+  import { Helmet } from 'react-helmet';
   import { servicesStyles } from "./services.styles";
   import { theme } from "../../styles/styles";
   import { useTranslation } from "react-i18next";
   import Services from "./Services";
   
   const Gemstone = () => {
+
     const classes = servicesStyles;
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
     const { t } = useTranslation("gemstone");

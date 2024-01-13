@@ -59,6 +59,7 @@
     "@mui/x-date-pickers": "^6.19.0",
     "@types/react-input-mask": "^3.0.5",
     "@types/react-swipeable-views": "^0.13.5",
-    "dayjs": "^1.11.10"
+    "dayjs": "^1.11.10",
+    "react-helmet": "^6.1.0"
   }
 }

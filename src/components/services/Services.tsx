@@ -6,6 +6,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { Helmet } from 'react-helmet';
 import { servicesStyles } from "./services.styles";
 import { getRelativeFontSize, latoMediumFont, theme } from "../../styles/styles";
 import { useTranslation } from "react-i18next";
@@ -43,6 +44,17 @@ const Services = (props: CustomProps) => {
     return (
       <>
         <Box sx={classes.panchangMain}>
+        <helmet>
+                <link rel="canonical" href="https://www.astrolohani.com/services/" />
+        <title>
+          Astrolohani Services | Illuminate Your Cosmic Journey | Astrology Now
+        </title>
+        <meta
+          name="description"
+          content="Explore our astrology services curated under the expert guidance of Pandit Lalit Lohani. Unlock the secrets of your cosmic journey with Vedic Kundali, create positive spaces with Vastu Visit, discover the power of gemstones, navigate the year ahead with Varshik Fal, find lasting relationships through Horoscope Matching, and make important moments shine with Muhurat Suggestions."
+        />
+
+        </helmet>
           <Container maxWidth="md" sx={{ textAlign: "center" }}>
             <Stack
               direction="column"

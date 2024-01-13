@@ -6,6 +6,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { Helmet } from "react-helmet";
 import ContactUsStyles from "./ContactUs.styles";
 import call from "../../assets/images/contact/call.webp";
 import adress from "../../assets/images/contact/address.webp";
@@ -34,6 +35,14 @@ const Contact = () => {
   const introDeskTopView = () => {
     return (
       <Box position="relative" mb={10}>
+        <helmet>
+                <link rel="canonical" href="https://www.astrolohani.com/contact-us/" />
+        <title>Contact Astrolohani | Vedic Astrology Services in Rudrapur</title>
+                <meta
+                  name="description"
+                  content="Connect with Astrolohani for authentic Vedic astrology services. Visit us at LIG-A-495/8, Dashmesh Road, Avas Vikas Holy Chowk, Rudrapur, or call +91-8439110001 to speak with Lalit Lohani and schedule a consultation."
+                />
+        </helmet>
         <Box sx={classes.blueBox} />
         <Box sx={classes.grayBox} />
         <Stack

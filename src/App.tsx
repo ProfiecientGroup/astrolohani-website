@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { Box } from "@mui/material";
+import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeComponent from "./components/home/Home";
 import Layout from "./components/shared/Layout/Layout";
@@ -18,6 +19,19 @@ const App = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Router>
         <Layout>
+            <Helmet>
+            <title>Astrolohani - Your Gateway to Vedic Astrology and Spiritual Insights</title>
+            <meta name="description" content="Experience the transformative power of Vedic astrology at astrolohani. Get insights into your life's journey, improve spaces with Vastu expertise, discover the radiance of gemstones, navigate the year ahead with annual predictions, and find lasting relationships through horoscope matching."/>
+           <meta name="keywords"
+          content="astrolohani, best astrologer in rudrapur , best astrologer in uttrakhand, pandit lalit lohani,Vedic astrology, astrology services, horoscope matching, gemstone recommendations, Vastu Shastra, annual predictions, astrologer in Rudrapur, Kundali analysis, cosmic guidance, spiritual insights"
+        />
+        <meta property="og:title" content="Astrolohani - Your Trusted Astrologer" />
+        <meta property="og:description" content="Unlock the secrets of your life's journey with personalized Vedic Kundali charts." />
+        <meta
+          property="og:image"
+          content="https://cdn.astrolohani.com/astrolohani/astrolohani-og-image.png"
+        />
+          </Helmet>
           <Routes>
             <Route path="/" element={<HomeComponent />} />
             <Route path="/about-us" element={<AboutUs />} />
