@@ -9,7 +9,6 @@ import {
 import panditLlalitPic from "../../assets/images/aboutUs/panditLalitPic.webp";
 import { aboutUsStyles } from "./AboutUs.styles";
 import aboutIcon from "../../assets/images/home/aboutIcon.webp";
-import { aboutServices } from "./AboutUsData";
 import { theme } from "../../styles/styles";
 import { useTranslation } from "react-i18next";
 
@@ -17,7 +16,7 @@ const AboutUs = () => {
   const classes = aboutUsStyles;
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const { t } = useTranslation("common");
-  // const aboutSections: any = t("aboutSections", { returnObjects: true });
+  const aboutSections: any = t("aboutSections", { returnObjects: true });
 
   const getAboutUs = () => {
     return (
@@ -134,7 +133,7 @@ const AboutUs = () => {
                 </Grid>
               );
             })} */}
-            {/* {aboutSections.map((i: any, index: number) => {
+            {aboutSections.map((i: any, index: number) => {
               return (
                 <Grid item xs={12} sm={12} md={12} lg={6} key={index}>
                   <Stack
@@ -169,7 +168,7 @@ const AboutUs = () => {
                   </Stack>
                 </Grid>
               );
-            })} */}
+            })}
           </Grid>
         </Container>
         <Container maxWidth="md">
