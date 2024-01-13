@@ -29,6 +29,7 @@ import CustomCarousel from "./component/CustomCarousel";
 import Testimonials from "./component/Testimonials";
 import HomeAccordion from "./component/HomeAccordion";
 import OurServicesTestimonial from "./component/OurServicesTestimonial";
+import ContactUsForm from "../contactus/ContactUsForm";
 
 const HomeComponent = () => {
   const { t } = useTranslation("home"); // Use the translation hook
@@ -221,26 +222,30 @@ const HomeComponent = () => {
                     alignItems="center"
                   >
                     <Box sx={classes.readBtn} marginTop={0}>
-                      <Link to={urls.aboutUsPathView}>
-                        <a target="_target">
-                          <Typography sx={classes.readText}>
-                            {/* read more */}
-                            {t("btnName")}
-                          </Typography>
-                        </a>
+                      <Link
+                        to={urls.aboutUsPathView}
+                        target="_blank"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Typography sx={classes.readText}>
+                          {/* read more */}
+                          {t("btnName")}
+                        </Typography>
                       </Link>
                     </Box>
                     <Box sx={classes.bookingBtn}>
-                      <Link to={urls.contactUsViewPath}>
-                        <a target="_target">
-                          <Typography
-                            sx={classes.btnText}
-                            color="#272C65 !important"
-                          >
-                            {/* Booking & Appointment */}
-                            {t("appointmentName")}
-                          </Typography>
-                        </a>
+                      <Link
+                        to={urls.contactUsViewPath}
+                        target="_blank"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Typography
+                          sx={classes.btnText}
+                          color="#272C65 !important"
+                        >
+                          {/* Booking & Appointment */}
+                          {t("appointmentName")}
+                        </Typography>
                       </Link>
                     </Box>
                   </Stack>
@@ -363,6 +368,8 @@ const HomeComponent = () => {
             <Stack
               direction={{ lg: "row", md: "row", sm: "column", xs: "column" }}
               spacing={2}
+              justifyContent={"center"}
+              alignItems={"center"}
             >
               <img
                 alt="vedic kundali"
@@ -577,6 +584,20 @@ const HomeComponent = () => {
     );
   };
 
+  const makeAppointment = () => {
+    return (
+      <Box sx={classes.aboutMain}>
+        {isDesktop ? (
+          <Container maxWidth="md">
+            <ContactUsForm />
+          </Container>
+        ) : (
+          <ContactUsForm />
+        )}
+      </Box>
+    );
+  };
+
   return (
     <>
       <Box sx={classes.homeMain}>
@@ -587,6 +608,7 @@ const HomeComponent = () => {
         {whyChooseUs()}
         {testimonialSection()}
         {faqSection()}
+        {makeAppointment()}
       </Box>
     </>
   );

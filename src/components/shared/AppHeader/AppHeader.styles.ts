@@ -49,6 +49,7 @@ const appHeaderStyles = {
     ...RobotoMediumFont,
     width: "auto",
     color: "#FFFFFF",
+    // lineHeight: 0,
     "&:hover": {
       ...robotoBoldFont,
       color: "#272C65",
@@ -139,6 +140,7 @@ const appHeaderStyles = {
     fontSize: getRelativeFontSize(1),
     maxWidth: "100vw",
     margin: 0,
+    color: "#0D3057",
     "&:hover": {
       color: "#0D3057",
     },

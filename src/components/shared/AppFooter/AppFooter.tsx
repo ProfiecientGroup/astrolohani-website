@@ -16,6 +16,7 @@ import CallingFooter from "../../../assets/icons/footerIcon/phone.svg";
 import map from "../../../assets/icons/footerIcon/map.svg";
 import strings from "../../../global/constants/strings";
 import { Link } from "react-router-dom";
+import CustomMap from "./customMap";
 
 const footerData = [
   {
@@ -101,15 +102,25 @@ const AppFooter = () => {
               </Stack>
               <Stack direction={"row"} gap={1}>
                 <img src={CallingFooter} alt="call" />
-                <Typography sx={classes.regularFont}>
-                  <a href={`tel:${strings.CONTACT}`}>{strings.CONTACT}</a>
-                </Typography>
+                <Link
+                  to={`tel:${strings.CONTACT}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Typography sx={classes.regularFont}>
+                    {strings.CONTACT}
+                  </Typography>
+                </Link>
               </Stack>
               <Stack direction={"row"} gap={1}>
                 <img src={MessageFooter} alt="message" />
-                <Typography sx={classes.regularFont}>
-                  <a href={`mailto:${strings.SUPPORT}`}>{strings.SUPPORT}</a>
-                </Typography>
+                <Link
+                  to={`mailto:${strings.SUPPORT}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Typography sx={classes.regularFont}>
+                    {strings.SUPPORT}
+                  </Typography>
+                </Link>
               </Stack>
             </Stack>
           </Grid>
@@ -121,15 +132,17 @@ const AppFooter = () => {
                     <Typography sx={classes.label}>{data.title}</Typography>
                     {data.data.map((i: any, index: number) => {
                       return (
-                        <Link to={i.redirectLink} key={index}>
-                          <a href={i.redirectLink}>
-                            <Typography
-                              key={index}
-                              sx={[classes.regularFont, classes.pointerCursor]}
-                            >
-                              {i.name}
-                            </Typography>
-                          </a>
+                        <Link
+                          to={i.redirectLink}
+                          key={index}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography
+                            key={index}
+                            sx={[classes.regularFont, classes.pointerCursor]}
+                          >
+                            {i.name}
+                          </Typography>
                         </Link>
                       );
                     })}
@@ -148,7 +161,7 @@ const AppFooter = () => {
               xl={4}
               sx={{ ...centerItemFlex }}
             >
-              {/* <CustomMap /> */}
+              <CustomMap />
             </Grid>
           )}
         </Grid>

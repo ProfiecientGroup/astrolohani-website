@@ -14,6 +14,7 @@ import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftR
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 // import { ourServicesTestimonialData } from "../HomeData";
 import { useTranslation } from "react-i18next";
+import { centerItemFlex } from "../../../styles/styles";
 
 const OurServicesTestimonial = () => {
   const classes = homeStyles;
@@ -59,15 +60,14 @@ const OurServicesTestimonial = () => {
             <Box
               key={step.label}
               sx={{
-                display: "flex",
-                justifyContent: "center",
+                ...centerItemFlex,
               }}
             >
               {Math.abs(activeStep - index + 1) <= 1 && (
                 <Stack direction="column" spacing={2}>
                   <Box
                     sx={{
-                      height: "276px",
+                      height: "auto",
                       width: "200px",
                       overflow: "hidden",
                       backgroundColor: "#FFFFFF",
@@ -151,7 +151,7 @@ const OurServicesTestimonial = () => {
           <Stack direction="column" spacing={2}>
             <Box
               sx={{
-                height: "276px",
+                height: "200px",
                 width: "200px",
                 overflow: "hidden",
                 backgroundColor: "#FFFFFF",
@@ -178,7 +178,7 @@ const OurServicesTestimonial = () => {
             </Box>
             <Box
               sx={{
-                height: "276px",
+                height: "200px",
                 width: "200px",
                 overflow: "hidden",
                 backgroundColor: "#FFFFFF",
