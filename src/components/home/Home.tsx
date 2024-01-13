@@ -16,7 +16,6 @@ import urls from "../../global/constants/urls";
 import playBtn from "../../assets/images/home/playBtn.svg";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import LanguageSwitcher from "../../global/components/LanguageSwitcher";
 
 const HomeComponent = () => {
   const { t } = useTranslation("home"); // Use the translation hook
@@ -47,7 +46,6 @@ const HomeComponent = () => {
               alignItems="center"
               mb={5}
             >
-              <LanguageSwitcher/>
               <Typography sx={classes.aboutText} gutterBottom>
                 {/* About Pandit Lalit Lohani */}
                 {t("panditName")} {/* Translated title */}
