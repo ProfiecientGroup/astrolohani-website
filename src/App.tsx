@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeComponent from "./components/home/Home";
 import Layout from "./components/shared/Layout/Layout";
 import AboutUs from "./components/aboutUs/AboutUs";
+import ContactUsForm from "./components/contactus/ContactUsForm";
+import Contact from "./components/contactus/Contact";
 import VedicKundali from "./components/services/VedicKundali";
 
 const App = () => {
@@ -15,6 +17,7 @@ const App = () => {
             <Route path="/" element={<HomeComponent />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/services/vedic-kundali" element={<VedicKundali />} />
+            <Route path="/contact-us" element={<Contact/>} />
           </Routes>
         </Layout>
       </Router>
