@@ -1,28 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { InputAdornment, MenuItem, OutlinedInput, Select } from "@mui/material";
-import { useLocation } from "react-router-dom";
 import i18n from "../../i18n";
 import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
 
 const ITEM_HEIGHT = 40;
 const ITEM_PADDING_TOP = 8;
-
 const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 120,
-      transformOrigin: "center center",
     },
   },
 };
 
 const LanguageSwitcher = () => {
-  const location = useLocation();
+  const [lan, setLan] = useState(i18n.language);
 
-  const changeLanguage = (e: any) => {
-    e.stopPropagation();
-    i18n.changeLanguage(e.target.value);
+  const changeLanguage = (event: React.ChangeEvent<{ value: unknown }>) => {
+    const newLanguage = event.target.value as string;
+    i18n.changeLanguage(newLanguage);
+    setLan(newLanguage);
   };
 
   return (
@@ -30,8 +28,8 @@ const LanguageSwitcher = () => {
       <Select
         id="language"
         name="language"
-        value={i18n.language} // Set to current language
-        onChange={(e) => changeLanguage(e)} // Pass only the language value
+        value={lan}
+        onChange={(event: any) => changeLanguage(event)}
         input={
           <OutlinedInput
             startAdornment={
