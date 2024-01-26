@@ -95,7 +95,6 @@ const AppHeader = (props: CustomProps) => {
 
   function handleClick(event: any, data: any) {
     if (anchor !== event.currentTarget) {
-      currentlyHovering2 = true;
       setAnchor(event.currentTarget);
       setMenuData(data);
     }
@@ -113,6 +112,15 @@ const AppHeader = (props: CustomProps) => {
   function handleHover() {
     currentlyHovering2 = true;
   }
+
+  const handleMenuItemClick = (
+    event: React.MouseEvent<HTMLLIElement>,
+    path: string
+  ) => {
+    handleClose();
+    setAnchor(null);
+    setMenuMobileVisible(false);
+  };
 
   const handleClose = () => {
     setAnchor(null);
@@ -226,7 +234,7 @@ const AppHeader = (props: CustomProps) => {
           id="simple-menu"
           anchorEl={anchor}
           open={Boolean(anchor)}
-          onClose={() => handleClose()}
+          onClose={handleClose}
           onClick={() => {
             setAnchor(null);
             setMenuMobileVisible(false);
@@ -264,16 +272,9 @@ const AppHeader = (props: CustomProps) => {
               to={item.path}
               key={index}
               style={{ textDecoration: "none" }}
-              onClick={(e) => {
-                e.stopPropagation(); // Stop event propagation
-                handleClose(); // Close the menu
-              }}
             >
               <MenuItem
-                onClick={(e) => {
-                  e.stopPropagation(); // Stop event propagation
-                  handleClose(); // Close the menu
-                }}
+                onClick={(e) => handleMenuItemClick(e, item.path)}
                 sx={[
                   classes.saviynt,
                   isActiveTab(item.path) && classes.selected,

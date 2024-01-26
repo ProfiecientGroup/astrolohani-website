@@ -205,7 +205,6 @@ const ContactUsForm = () => {
         //   },
         //   body: JSON.stringify(body),
         // };
-        console.log("body", body);
 
         // await fetch(urls.contactApiCallEndpoint, requestOptions);
         setOpen(true);
@@ -238,8 +237,6 @@ const ContactUsForm = () => {
         });
       }
     } catch (errorMessage: any) {
-      console.log("error", errorMessage);
-
       setOpen(true);
       setIsSuccess(false);
     } finally {
