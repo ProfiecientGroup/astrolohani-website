@@ -203,7 +203,6 @@ const AppHeader = (props: CustomProps) => {
           aria-owns={anchor ? "simple-menu" : undefined}
           aria-haspopup="true"
           onClick={(e) => {
-            e.stopPropagation();
             handleClick(e, serviceData);
           }}
           onMouseOver={(e: any) => handleClick(e, serviceData)}
@@ -227,7 +226,7 @@ const AppHeader = (props: CustomProps) => {
           id="simple-menu"
           anchorEl={anchor}
           open={Boolean(anchor)}
-          onClose={handleClose}
+          onClose={() => handleClose()}
           onClick={() => {
             setAnchor(null);
             setMenuMobileVisible(false);
@@ -265,10 +264,16 @@ const AppHeader = (props: CustomProps) => {
               to={item.path}
               key={index}
               style={{ textDecoration: "none" }}
-              onClick={() => handleClose()}
+              onClick={(e) => {
+                e.stopPropagation(); // Stop event propagation
+                handleClose(); // Close the menu
+              }}
             >
               <MenuItem
-                onClick={() => handleClose()}
+                onClick={(e) => {
+                  e.stopPropagation(); // Stop event propagation
+                  handleClose(); // Close the menu
+                }}
                 sx={[
                   classes.saviynt,
                   isActiveTab(item.path) && classes.selected,
@@ -390,7 +395,7 @@ const AppHeader = (props: CustomProps) => {
               </Box>
               {isDesktop && (
                 <Stack direction="row" spacing={2}>
-                  <LanguageSwitcher fontColor={"#FFFFFF"}/>
+                  <LanguageSwitcher fontColor={"#FFFFFF"} />
                   {socialMediaIcon.map((i: any, index: number) => {
                     return (
                       <Link to={i.redirectLink} key={index}>
