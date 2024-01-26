@@ -14,6 +14,7 @@ import call from "../../../assets/icons/appHeader/call.webp";
 import mail from "../../../assets/icons/appHeader/adress.webp";
 import { Link } from "react-router-dom";
 import CloseButton from "../../../global/components/CloseButton/CloseButton";
+import LanguageSwitcher from "../LanguageSwitcher";
 interface CustomProps {
   setMenuMobileVisible?: Function;
   isActive?: boolean;
@@ -59,14 +60,20 @@ const AppDrawer = (props: CustomProps) => {
       <Stack direction="column" alignItems="center" spacing={3}>
         <Stack direction={"row"} gap={1} alignItems="center">
           <img src={call} alt="phone" height="15px" width="15px" />
-          <Link to={`tel:${strings.CONTACT}`} style={{ textDecoration: "none" }}>
+          <Link
+            to={`tel:${strings.CONTACT}`}
+            style={{ textDecoration: "none" }}
+          >
             <Typography sx={classes.regularFont}>{strings.CONTACT}</Typography>
           </Link>
         </Stack>
         <Stack direction={"row"} gap={1} alignItems="center">
           <img src={mail} alt="mail" height="15px" width="15px" />
 
-          <Link to={`mailto:${strings.SUPPORT}`} style={{ textDecoration: "none" }}>
+          <Link
+            to={`mailto:${strings.SUPPORT}`}
+            style={{ textDecoration: "none" }}
+          >
             <Typography sx={classes.regularFont}>{strings.SUPPORT}</Typography>
           </Link>
         </Stack>
@@ -86,7 +93,14 @@ const AppDrawer = (props: CustomProps) => {
         <Box style={{ width: "100%" }}>
           {!isDesktop && getCloseButton()}
           {!isDesktop && getLogo()}
-          {props.listItems}
+          <Stack
+            direction={"column"}
+            alignItems={"center"}
+            padding={"38px 0px"}
+          >
+            <LanguageSwitcher fontColor={"#F4A636"} />
+            {props.listItems}
+          </Stack>
           {socialMedia()}
           <Box textAlign="center">
             <Typography

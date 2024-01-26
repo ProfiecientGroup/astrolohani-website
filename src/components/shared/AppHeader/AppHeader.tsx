@@ -390,7 +390,7 @@ const AppHeader = (props: CustomProps) => {
               </Box>
               {isDesktop && (
                 <Stack direction="row" spacing={2}>
-                  <LanguageSwitcher />
+                  <LanguageSwitcher fontColor={"#FFFFFF"}/>
                   {socialMediaIcon.map((i: any, index: number) => {
                     return (
                       <Link to={i.redirectLink} key={index}>

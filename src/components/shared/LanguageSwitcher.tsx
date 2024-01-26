@@ -14,7 +14,11 @@ const MenuProps = {
   },
 };
 
-const LanguageSwitcher = () => {
+export interface customProps {
+  fontColor: string;
+}
+
+const LanguageSwitcher = (props: customProps) => {
   const [lan, setLan] = useState(i18n.language);
 
   const changeLanguage = (event: React.ChangeEvent<{ value: unknown }>) => {
@@ -47,12 +51,12 @@ const LanguageSwitcher = () => {
           "& .MuiInputBase-input": {
             padding: "12px 12px",
             position: "relative",
-            color: "white",
+            color: props.fontColor,
           },
           "& .MuiOutlinedInput-input": {
             "&.MuiSelect-select": {
               borderColor: "gray",
-              color: "white",
+              color: props.fontColor,
             },
           },
           "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {

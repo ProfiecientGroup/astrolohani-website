@@ -61,7 +61,7 @@ const CustomCarousel = () => {
                   <Box
                     sx={{
                       backgroundImage: "url(" + step.bgBanner + ")",
-                      height: "600px",
+                      height: "700px",
                       backgroundSize: "cover",
                       backgroundRepeat: "no-repeat",
                       // backgroundPosition: "center",
