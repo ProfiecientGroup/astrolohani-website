@@ -15,12 +15,7 @@ import aboutIcon from "../../assets/images/home/aboutIcon.webp";
 import ourServicesIcon from "../../assets/images/home/ourServicesIcon.webp";
 import aboutIcon1 from "../../assets/images/home/aboutIcon1.png";
 import whyChooseIcon from "../../assets/images/home/whyChooseIcon.webp";
-import {
-  accordionContent,
-  comingFallData,
-  liteData,
-  whyChooseUsData,
-} from "./HomeData";
+import { comingFallData } from "./HomeData";
 import urls from "../../global/constants/urls";
 import playBtn from "../../assets/images/home/playBtn.svg";
 import { useTranslation } from "react-i18next";
@@ -65,8 +60,7 @@ const HomeComponent = () => {
               mb={5}
             >
               <Typography sx={classes.aboutText} gutterBottom>
-                {/* About Pandit Lalit Lohani */}
-                {t("panditName")} {/* Translated title */}
+                {t("panditName")}
               </Typography>
               <img
                 src={aboutIcon}
@@ -130,7 +124,6 @@ const HomeComponent = () => {
                     textAlign="start"
                     gutterBottom
                   >
-                    {/* What Do We Do ? */}
                     {t("aboutWhatDO")}
                   </Typography>
                   <Stack direction="row" spacing={2} mb={1}>
@@ -147,19 +140,9 @@ const HomeComponent = () => {
                         textAlign="start"
                       >
                         {t("aboutDes1")}
-                        {/* Renowned for his Pure Handwritten (Hasth Likhit)
-                        horoscopes, precise horoscope matching, and insightful
-                        year forecasts, Pandit Lohani offers a guiding hand in
-                        the journey of life. His expertise extends to Muhurta
-                        calculations, astrology stone recommendations, kundali
-                        readings, varshik rashifal predictions, and more. */}
                       </Typography>
                       <Typography sx={classes.aboutDes} textAlign="start">
                         {t("aboutDes2")}
-                        {/* Whether you seek clarity in career, love, or life&apos;s
-                        diverse facets, Pandit Lalit Lohani&apos;s wisdom is
-                        your celestial compass, helping you navigate the stars
-                        and uncover the path to your destiny. */}
                       </Typography>
                     </Box>
                   </Stack>
@@ -208,7 +191,6 @@ const HomeComponent = () => {
                         style={{ textDecoration: "none" }}
                       >
                         <Typography sx={classes.readText}>
-                          {/* read more */}
                           {t("btnName")}
                         </Typography>
                       </Link>
@@ -223,7 +205,6 @@ const HomeComponent = () => {
                           sx={classes.btnText}
                           color="#272C65 !important"
                         >
-                          {/* Booking & Appointment */}
                           {t("appointmentName")}
                         </Typography>
                       </Link>
@@ -251,7 +232,6 @@ const HomeComponent = () => {
               mb={5}
             >
               <Typography sx={classes.aboutText} gutterBottom>
-                {/* Horoscope */}
                 {t("horoscopeName")}
               </Typography>
               <img
@@ -261,15 +241,22 @@ const HomeComponent = () => {
                 height="15px"
                 style={{ marginBottom: 15 }}
               />
-              <Typography sx={classes.aboutDes}>
-                {t("panchangDes")}
-                {/* Unlocking Destiny with Handcrafted Vedic Astrology */}
-              </Typography>
+              <Typography sx={classes.aboutDes}>{t("panchangDes")}</Typography>
             </Stack>
             <Grid container spacing={{ lg: 2, xs: 4, sm: 3 }}>
               {liteData.map((item: any, index: number) => {
                 return (
-                  <Grid item md={2} lg={2} xs={6} sm={3} key={index}>
+                  <Grid
+                    item
+                    md={3}
+                    lg={2}
+                    xs={6}
+                    sm={4}
+                    key={index}
+                    display={"flex"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                  >
                     <Box sx={classes.horoscopeMain}>
                       <Box sx={classes.horoscopeInner}>
                         <Box sx={classes.horoscopeFrontSide}>
@@ -327,7 +314,6 @@ const HomeComponent = () => {
               mb={5}
             >
               <Typography sx={classes.aboutText} gutterBottom>
-                {/* Our Services{" "} */}
                 {t("ourServicesName")}
               </Typography>
               <img
@@ -339,10 +325,6 @@ const HomeComponent = () => {
               />
               <Typography sx={classes.aboutDes}>
                 {t("ourServicesDec")}
-                {/* Explore the Cosmic Blueprint of Your Life with Vedic Kundali,
-                Craft Harmonious Spaces with Vastu Wisdom, Discover Gemstone
-                Power, Gain Annual Cosmic Insights, Find Love with Celestial
-                Matchmaking, and Elevate Moments with Auspicious Timings. */}
               </Typography>
             </Stack>
             <Stack
@@ -354,8 +336,8 @@ const HomeComponent = () => {
               <img
                 alt="vedic kundali"
                 src={ourServicesIcon}
-                width={isDesktop ? "100%" : "100%"}
-                height={isDesktop ? "567px" : "100%"}
+                width={isDesktop ? "100%" : "50%"}
+                height={isDesktop ? "567px" : "50%"}
               />
               <OurServicesTestimonial />
             </Stack>
@@ -378,7 +360,6 @@ const HomeComponent = () => {
               mb={5}
             >
               <Typography sx={classes.whyChooseText} gutterBottom>
-                {/* Why Choose Us */}
                 {t("whyChooseUsText")}
               </Typography>
               <img
@@ -390,7 +371,6 @@ const HomeComponent = () => {
               />
               <Typography sx={classes.whyChooseDes}>
                 {t("whyChooseUsDes")}
-                {/* Guiding Life's Journey with Trust and Expertise. */}
               </Typography>
             </Stack>
           </Container>
@@ -433,7 +413,6 @@ const HomeComponent = () => {
             mb={5}
           >
             <Typography sx={classes.aboutText} gutterBottom>
-              {/* What clients are saying */}
               {t("testimonialTitle")}
             </Typography>
             <img
@@ -443,11 +422,7 @@ const HomeComponent = () => {
               height="15px"
               style={{ marginBottom: 15 }}
             />
-            <Typography sx={classes.aboutDes}>
-              {/* Discover How We've Touched Lives. Words from Satisfied Cosmic
-              Explorers. */}
-              {t("testimonialDes")}
-            </Typography>
+            <Typography sx={classes.aboutDes}>{t("testimonialDes")}</Typography>
           </Stack>
           <Testimonials />
         </Container>
@@ -542,7 +517,6 @@ const HomeComponent = () => {
               mb={5}
             >
               <Typography sx={classes.whyChooseText} gutterBottom>
-                {/* Frequently Asked Questions */}
                 {t("FAQText")}
               </Typography>
               <img
@@ -553,7 +527,6 @@ const HomeComponent = () => {
                 style={{ marginBottom: 15 }}
               />
               <Typography sx={classes.whyChooseDes}>
-                {/* Answers to Your Cosmic Queries. */}
                 {t("FAQHeading")}
               </Typography>
             </Stack>

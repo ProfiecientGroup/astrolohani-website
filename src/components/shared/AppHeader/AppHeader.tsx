@@ -19,7 +19,7 @@ import appHeaderStyles from "./AppHeader.styles";
 import AppDrawer from "../AppDrawer/AppDrawer";
 import { useMediaQuery } from "@mui/material";
 import logo from "../../../assets/icons/logo/whiteLogo.svg";
-import { getRelativeFontSize, theme } from "../../../styles/styles";
+import { theme } from "../../../styles/styles";
 import urls from "../../../global/constants/urls";
 import adress from "../../../assets/icons/appHeader/adress.webp";
 import call from "../../../assets/icons/appHeader/call.webp";
@@ -27,9 +27,7 @@ import facebook from "../../../assets/icons/footerIcon/facebook.svg";
 import instagram from "../../../assets/icons/footerIcon/instagram.svg";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link, NavLink } from "react-router-dom";
-import { startTransition } from "react";
 import { isActiveTab } from "../../helpers/methods";
-import { url } from "inspector";
 
 interface CustomProps {
   toggleDrawer: Function;
@@ -157,14 +155,14 @@ const AppHeader = (props: CustomProps) => {
   const getNavMenu = () => {
     return (
       <List sx={classes.navMenuMain}>
-        <NavLink to={urls.homePathView}>
+        <NavLink to={urls.homePathView} onClick={() => handleClose()}>
           <ListItem
             sx={[
               classes.navBtn,
               isActiveTab(urls.homePathView) && classes.selected,
             ]}
             onClick={(e) => {
-              // e.stopPropagation();
+              setAnchor(null);
               setMenuMobileVisible(false);
             }}
           >
@@ -179,13 +177,14 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <NavLink to={urls.aboutUsPathView}>
+        <NavLink to={urls.aboutUsPathView} onClick={() => handleClose()}>
           <ListItem
             sx={[
               classes.navBtn,
               isActiveTab(urls.aboutUsPathView) && classes.selected,
             ]}
             onClick={(e) => {
+              setAnchor(null);
               setMenuMobileVisible(false);
             }}
           >
@@ -230,8 +229,8 @@ const AppHeader = (props: CustomProps) => {
           open={Boolean(anchor)}
           onClose={handleClose}
           onClick={() => {
-            setMenuMobileVisible(false);
             setAnchor(null);
+            setMenuMobileVisible(false);
           }}
           MenuListProps={{
             onMouseEnter: handleHover,
@@ -243,11 +242,10 @@ const AppHeader = (props: CustomProps) => {
               // paddingRight: 0,
               // paddingLeft: 0,
               // width: "10vw",
-              // maxWidth: "100vw",
-              // [theme.breakpoints.down("md")]:{
-              //   width: "20vw",
+              // maxWidth: "auto",
+              // [theme.breakpoints.up("lg")]:{
+              //   width: "30vw",
               //   maxWidth: "100vw",
-
               // }
             },
           }}
@@ -267,9 +265,23 @@ const AppHeader = (props: CustomProps) => {
               to={item.path}
               key={index}
               style={{ textDecoration: "none" }}
+              onClick={() => handleClose()}
             >
-              <MenuItem onClick={handleClose} sx={classes.saviynt}>
-                <Typography sx={classes.saviynt}>{item.title}</Typography>
+              <MenuItem
+                onClick={() => handleClose()}
+                sx={[
+                  classes.saviynt,
+                  isActiveTab(item.path) && classes.selected,
+                ]}
+              >
+                <Typography
+                  sx={[
+                    classes.saviynt,
+                    isActiveTab(item.path) && classes.selected,
+                  ]}
+                >
+                  {item.title}
+                </Typography>
               </MenuItem>
             </NavLink>
           ))}
@@ -282,13 +294,18 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <NavLink to={urls.contactUsViewPath} style={{ textDecoration: "none" }}>
+        <NavLink
+          to={urls.contactUsViewPath}
+          style={{ textDecoration: "none" }}
+          onClick={() => handleClose()}
+        >
           <ListItem
             sx={[
               classes.navBtn,
               isActiveTab(urls.contactUsViewPath) && classes.selected,
             ]}
             onClick={(e) => {
+              setAnchor(null);
               setMenuMobileVisible(false);
             }}
           >

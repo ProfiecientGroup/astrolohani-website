@@ -14,7 +14,6 @@ import homeStyles from "../Home.styles";
 import { centerItemFlex } from "../../../styles/styles";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import { bannerCarousel } from "../HomeData";
 import urls from "../../../global/constants/urls";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";

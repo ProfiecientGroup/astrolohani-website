@@ -278,7 +278,7 @@ const homeStyles = {
     color: "#212121",
     fontSize: getRelativeFontSize(4),
     padding: 0,
-    textAlign:"justify",
+    textAlign: "justify",
     [theme.breakpoints.down("md")]: {
       fontSize: getRelativeFontSize(-1),
     },
@@ -368,7 +368,7 @@ const homeStyles = {
       transform: "rotateY(180deg)",
     },
     [theme.breakpoints.down("md")]: {
-      height: "180px",
+      height: "150px",
       width: "110px",
     },
   },
@@ -381,7 +381,7 @@ const homeStyles = {
     position: "absolute",
     backfaceVisibility: "hidden",
     [theme.breakpoints.down("md")]: {
-      height: "180px",
+      height: "150px",
       width: "110px",
     },
   },
@@ -395,7 +395,7 @@ const homeStyles = {
     backfaceVisibility: "hidden",
     padding: 0.2,
     [theme.breakpoints.down("md")]: {
-      height: "180px",
+      height: "150px",
       width: "110px",
     },
   },
@@ -404,7 +404,6 @@ const homeStyles = {
     color: "#FFFFFF",
     fontSize: getRelativeFontSize(-4),
   },
-
 } as const;
 
 export default homeStyles;
