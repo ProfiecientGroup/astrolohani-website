@@ -61,7 +61,7 @@ const CustomCarousel = () => {
                   <Box
                     sx={{
                       backgroundImage: "url(" + step.bgBanner + ")",
-                      height: "700px",
+                      height: "650px",
                       backgroundSize: "cover",
                       backgroundRepeat: "no-repeat",
                       // backgroundPosition: "center",
@@ -70,6 +70,10 @@ const CustomCarousel = () => {
                       backgroundColor: "#FFFFFF",
                       ...centerItemFlex,
                       transition: "all ease 2s",
+                      [theme.breakpoints.down("md")]:{
+                        height: "500px",
+
+                      }
                     }}
                   >
                     {isDesktop && (

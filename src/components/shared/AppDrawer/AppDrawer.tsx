@@ -96,7 +96,7 @@ const AppDrawer = (props: CustomProps) => {
           <Stack
             direction={"column"}
             alignItems={"center"}
-            padding={"38px 0px"}
+            padding={"30px 0px"}
           >
             <LanguageSwitcher fontColor={"#F4A636"} />
             {props.listItems}
