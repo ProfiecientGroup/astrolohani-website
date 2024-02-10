@@ -15,11 +15,24 @@ import mail from "../../../assets/icons/appHeader/adress.webp";
 import { Link } from "react-router-dom";
 import CloseButton from "../../../global/components/CloseButton/CloseButton";
 import LanguageSwitcher from "../LanguageSwitcher";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import InstagramIcon from "@mui/icons-material/Instagram";
 interface CustomProps {
   setMenuMobileVisible?: Function;
   isActive?: boolean;
   listItems: JSX.Element;
 }
+
+const socialMediaIcon = [
+  {
+    icon: <FacebookRoundedIcon />,
+    redirectLink: urls.facebook,
+  },
+  {
+    icon: <InstagramIcon />,
+    redirectLink: urls.instagram,
+  },
+];
 
 const AppDrawer = (props: CustomProps) => {
   const classes = appDrawerStyles;
@@ -100,6 +113,15 @@ const AppDrawer = (props: CustomProps) => {
           >
             <LanguageSwitcher fontColor={"#F4A636"} />
             {props.listItems}
+          </Stack>
+          <Stack direction="row" spacing={2} justifyContent="center" mb={2}>
+            {socialMediaIcon.map((i: any, index: number) => {
+              return (
+                <Link to={i.redirectLink} key={index}>
+                  <a target="_target">{i.icon}</a>
+                </Link>
+              );
+            })}
           </Stack>
           {socialMedia()}
           <Box textAlign="center">

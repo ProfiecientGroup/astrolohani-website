@@ -239,24 +239,15 @@ const AppHeader = (props: CustomProps) => {
             setAnchor(null);
             setMenuMobileVisible(false);
           }}
+          onMouseLeave={handleCloseHover}
           MenuListProps={{
             onMouseEnter: handleHover,
             onMouseLeave: handleCloseHover,
             style: {
               pointerEvents: "auto",
-              // paddingTop: 0,
-              // paddingBottom: 0,
-              // paddingRight: 0,
-              // paddingLeft: 0,
-              // width: "10vw",
-              // maxWidth: "auto",
-              // [theme.breakpoints.up("lg")]:{
-              //   width: "30vw",
-              //   maxWidth: "100vw",
-              // }
             },
           }}
-          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          // anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
           transformOrigin={{ vertical: "top", horizontal: "center" }}
           sx={{
             [`&.${popoverClasses.root}`]: {
@@ -272,6 +263,7 @@ const AppHeader = (props: CustomProps) => {
               to={item.path}
               key={index}
               style={{ textDecoration: "none" }}
+              onClick={(e: any) => handleMenuItemClick(e, item.path)}
             >
               <MenuItem
                 onClick={(e) => handleMenuItemClick(e, item.path)}
