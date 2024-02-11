@@ -1,36 +1,36 @@
 {
-  "bannerHeading": "",
-  "bannerDes": "",
-  "allServicesData": [
-    {
-      "img": "/servicesImg/vedicService.svg",
-      "title": "Vedic Kundali (Kundali Making)",
-      "des": "Uncover the cosmic tapestry of your life's journey with Astrolohani's personalized Vedic Kundali – a celestial life storybook tailored just for you."
-    },
-    {
-      "img": "/servicesImg/vastuService.svg",
-      "title": "Vastu Visit (Vastu Shastra Expertise)",
-      "des": "Elevate your living and working spaces with our Vastu Visit service, where Pandit Lahoni and his team bring the art of cosmic interior design to transform homes, businesses, and industries into harmonious environments."
-    },
-    {
-      "img": "/servicesImg/gemstoneService.svg",
-      "title": "Gemstone Recommendations and Sales",
-      "des": "Embark on a transformative journey with Astrolohani's Gemstone service, offering handpicked cosmic companions aligned with your Kundali analysis to strengthen planetary influences and bring balance to your energies."
-    },
-    {
-      "img": "/servicesImg/varshikService.svg",
-      "title": "Embrace the Future with Varshik Fal (Annual Predictions) at Astrolohani!",
-      "des": "Prepare for the upcoming year with Astrolohani's Varshik Fal service, offering a cosmic preview into the script of your life's next chapter. Led by Pandit Lahoni's 25 years of expertise, this personalized journey in Rudrapur unfolds a celestial roadmap, guiding you through the twists and turns of the coming year with clarity and foresight."
-    },
-    {
-      "img": "/servicesImg/kundaliService.web",
-      "title": "Find Lasting Love with Kundali Milan at Astrolohani in Rudrapur, Uttarakhand",
-      "des": "Forge enduring connections with Astrolohani's Kundali Milan service in Rudrapur. Led by Pandit Lahoni's 25 years of expertise, this cosmic matchmaking experience ensures compatibility in love and marriage through precise analysis of celestial forces."
-    },
-    {
-      "img": "/servicesImg/muhuratService.svg",
-      "title": "Seize Cosmic Favor with Muhurat Suggestions at Astrolohani in Rudrapur, Uttarakhand",
-      "des": "Harness the power of cosmic alignment with Astrolohani's Muhurat Suggestions service. Led by Pandit Lahoni's 25 years of expertise, our expert predictions guide you through auspicious timings for weddings, business launches, and significant life events."
-    }
-  ]
+    "bannerHeading": "",
+    "bannerDes": "",
+    "allServicesData": [
+        {
+            "img": "/mainServicesImg/servicesVedic.svg",
+            "title": "Vedic Kundali (Kundali Making)",
+            "des": "Uncover the cosmic tapestry of your life's journey with Astrolohani's personalized Vedic Kundali – a celestial life storybook tailored just for you."
+        },
+        {
+            "img": "/mainServicesImg/servicesVastu.svg",
+            "title": "Vastu Visit (Vastu Shastra Expertise)",
+            "des": "Elevate your living and working spaces with our Vastu Visit service, where Pandit Lahoni and his team bring the art of cosmic interior design to transform homes, businesses, and industries into harmonious environments."
+        },
+        {
+            "img": "/mainServicesImg/servicesGemstone.svg",
+            "title": "Gemstone Recommendations and Sales",
+            "des": "Embark on a transformative journey with Astrolohani's Gemstone service, offering handpicked cosmic companions aligned with your Kundali analysis to strengthen planetary influences and bring balance to your energies."
+        },
+        {
+            "img": "/mainServicesImg/servicesVarshik.svg",
+            "title": "Embrace the Future with Varshik Fal (Annual Predictions) at Astrolohani!",
+            "des": "Prepare for the upcoming year with Astrolohani's Varshik Fal service, offering a cosmic preview into the script of your life's next chapter. Led by Pandit Lahoni's 25 years of expertise, this personalized journey in Rudrapur unfolds a celestial roadmap, guiding you through the twists and turns of the coming year with clarity and foresight."
+        },
+        {
+            "img": "/mainServicesImg/servicesKundali.svg",
+            "title": "Find Lasting Love with Kundali Milan at Astrolohani in Rudrapur, Uttarakhand",
+            "des": "Forge enduring connections with Astrolohani's Kundali Milan service in Rudrapur. Led by Pandit Lahoni's 25 years of expertise, this cosmic matchmaking experience ensures compatibility in love and marriage through precise analysis of celestial forces."
+        },
+        {
+            "img": "/mainServicesImg/servicesMuhurat.svg",
+            "title": "Seize Cosmic Favor with Muhurat Suggestions at Astrolohani in Rudrapur, Uttarakhand",
+            "des": "Harness the power of cosmic alignment with Astrolohani's Muhurat Suggestions service. Led by Pandit Lahoni's 25 years of expertise, our expert predictions guide you through auspicious timings for weddings, business launches, and significant life events."
+        }
+    ]
 }
