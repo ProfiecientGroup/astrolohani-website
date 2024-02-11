@@ -88,42 +88,8 @@ const AppHeader = (props: CustomProps) => {
   const classes = appHeaderStyles;
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const [menuMobileVisible, setMenuMobileVisible] = useState<boolean>(false);
-  const [anchor, setAnchor] = useState(null);
-  const [menuData, setMenuData] = useState([]);
-
-  let currentlyHovering2 = false;
-
-  function handleClick(event: any, data: any) {
-    if (anchor !== event.currentTarget) {
-      setAnchor(event.currentTarget);
-      setMenuData(data);
-    }
-  }
-
-  function handleCloseHover() {
-    currentlyHovering2 = false;
-    setTimeout(() => {
-      if (!currentlyHovering2) {
-        handleClose();
-      }
-    }, 10);
-  }
-
-  function handleHover() {
-    currentlyHovering2 = true;
-  }
-
-  const handleMenuItemClick = (
-    event: React.MouseEvent<HTMLLIElement>,
-    path: string
-  ) => {
-    handleClose();
-    setAnchor(null);
-    setMenuMobileVisible(false);
-  };
 
   const handleClose = () => {
-    setAnchor(null);
     setMenuMobileVisible(false);
   };
 
@@ -170,7 +136,6 @@ const AppHeader = (props: CustomProps) => {
               isActiveTab(urls.homePathView) && classes.selected,
             ]}
             onClick={(e) => {
-              setAnchor(null);
               setMenuMobileVisible(false);
             }}
           >
@@ -192,7 +157,6 @@ const AppHeader = (props: CustomProps) => {
               isActiveTab(urls.aboutUsPathView) && classes.selected,
             ]}
             onClick={(e) => {
-              setAnchor(null);
               setMenuMobileVisible(false);
             }}
           >
@@ -207,83 +171,19 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <ListItem
-          aria-owns={anchor ? "simple-menu" : undefined}
-          aria-haspopup="true"
-          onClick={(e) => {
-            handleClick(e, serviceData);
-          }}
-          onMouseOver={(e: any) => handleClick(e, serviceData)}
-          onMouseLeave={handleCloseHover}
-          sx={{ ...classes.navBtn, lineHeight: 0 }}
-        >
-          <Typography
+        <NavLink to={urls.servicesViewPath} onClick={() => handleClose()}>
+          <ListItem
             sx={[
               classes.navBtn,
-              window.location.pathname.includes(urls.servicesViewPath) &&
-                classes.selected,
+              isActiveTab(urls.servicesViewPath) && classes.selected,
             ]}
-            style={{
-              lineHeight: 0,
+            onClick={(e) => {
+              setMenuMobileVisible(false);
             }}
           >
             Services
-          </Typography>
-        </ListItem>
-        <Menu
-          id="simple-menu"
-          anchorEl={anchor}
-          open={Boolean(anchor)}
-          onClose={handleClose}
-          onClick={() => {
-            setAnchor(null);
-            setMenuMobileVisible(false);
-          }}
-          onMouseLeave={handleCloseHover}
-          MenuListProps={{
-            onMouseEnter: handleHover,
-            onMouseLeave: handleCloseHover,
-            style: {
-              pointerEvents: "auto",
-            },
-          }}
-          // anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-          transformOrigin={{ vertical: "top", horizontal: "center" }}
-          sx={{
-            [`&.${popoverClasses.root}`]: {
-              pointerEvents: "none",
-            },
-            "& .MuiPopover-paper": {
-              boxShadow: "0px 1px 17px rgba(0, 0, 0, 0.13)",
-            },
-          }}
-        >
-          {menuData.map((item: any, index: number) => (
-            <NavLink
-              to={item.path}
-              key={index}
-              style={{ textDecoration: "none" }}
-              onClick={(e: any) => handleMenuItemClick(e, item.path)}
-            >
-              <MenuItem
-                onClick={(e) => handleMenuItemClick(e, item.path)}
-                sx={[
-                  classes.saviynt,
-                  isActiveTab(item.path) && classes.selected,
-                ]}
-              >
-                <Typography
-                  sx={[
-                    classes.saviynt,
-                    isActiveTab(item.path) && classes.selected,
-                  ]}
-                >
-                  {item.title}
-                </Typography>
-              </MenuItem>
-            </NavLink>
-          ))}
-        </Menu>
+          </ListItem>
+        </NavLink>
         <Divider
           orientation="vertical"
           variant="middle"
@@ -303,7 +203,6 @@ const AppHeader = (props: CustomProps) => {
               isActiveTab(urls.contactUsViewPath) && classes.selected,
             ]}
             onClick={(e) => {
-              setAnchor(null);
               setMenuMobileVisible(false);
             }}
           >
