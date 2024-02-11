@@ -30,12 +30,12 @@ const MainServices = () => {
     return (
       <>
         <Container maxWidth="lg">
-          <Typography>All Services</Typography>
+          <Typography textAlign="center">All Services</Typography>
           <Grid container spacing={1}>
             {allServicesData?.map((i: any, index: number) => {
               return (
-                <Grid item lg={6} md={6} sm={12} xs={12}>
-                  <Stack direction="column">
+                <Grid item lg={6} md={6} sm={12} xs={12} mb={2}>
+                  <Stack direction="column" spacing={1}>
                     <img src={i.img} />
                     <Typography>{i.title}</Typography>
                     <Typography>{i.des}</Typography>
