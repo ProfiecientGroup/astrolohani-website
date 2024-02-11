@@ -103,4 +103,14 @@ export const servicesStyles = {
       padding: 2,
     },
   },
+  servicesText: {
+    ...mediumFont,
+    color: "#111111",
+    fontSize: getRelativeFontSize(3),
+  },
+  btnStyle: {
+    ...mediumFont,
+    color: "#272C65",
+    fontSize: getRelativeFontSize(3),
+  },
 } as const;
