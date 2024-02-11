@@ -1,36 +1,38 @@
 {
-    "bannerHeading": "",
-    "bannerDes": "",
-    "allServicesData": [
-        {
-            "img": "/mainServicesImg/servicesVedic.svg",
-            "title": "Vedic Kundali (Kundali Making)",
-            "des": "Uncover the cosmic tapestry of your life's journey with Astrolohani's personalized Vedic Kundali – a celestial life storybook tailored just for you."
-        },
-        {
-            "img": "/mainServicesImg/servicesVastu.svg",
-            "title": "Vastu Visit (Vastu Shastra Expertise)",
-            "des": "Elevate your living and working spaces with our Vastu Visit service, where Pandit Lahoni and his team bring the art of cosmic interior design to transform homes, businesses, and industries into harmonious environments."
-        },
-        {
-            "img": "/mainServicesImg/servicesGemstone.svg",
-            "title": "Gemstone Recommendations and Sales",
-            "des": "Embark on a transformative journey with Astrolohani's Gemstone service, offering handpicked cosmic companions aligned with your Kundali analysis to strengthen planetary influences and bring balance to your energies."
-        },
-        {
-            "img": "/mainServicesImg/servicesVarshik.svg",
-            "title": "Embrace the Future with Varshik Fal (Annual Predictions) at Astrolohani!",
-            "des": "Prepare for the upcoming year with Astrolohani's Varshik Fal service, offering a cosmic preview into the script of your life's next chapter. Led by Pandit Lahoni's 25 years of expertise, this personalized journey in Rudrapur unfolds a celestial roadmap, guiding you through the twists and turns of the coming year with clarity and foresight."
-        },
-        {
-            "img": "/mainServicesImg/servicesKundali.svg",
-            "title": "Find Lasting Love with Kundali Milan at Astrolohani in Rudrapur, Uttarakhand",
-            "des": "Forge enduring connections with Astrolohani's Kundali Milan service in Rudrapur. Led by Pandit Lahoni's 25 years of expertise, this cosmic matchmaking experience ensures compatibility in love and marriage through precise analysis of celestial forces."
-        },
-        {
-            "img": "/mainServicesImg/servicesMuhurat.svg",
-            "title": "Seize Cosmic Favor with Muhurat Suggestions at Astrolohani in Rudrapur, Uttarakhand",
-            "des": "Harness the power of cosmic alignment with Astrolohani's Muhurat Suggestions service. Led by Pandit Lahoni's 25 years of expertise, our expert predictions guide you through auspicious timings for weddings, business launches, and significant life events."
-        }
-    ]
+  "bannerHeading": "एस्ट्रोलोहानी: आपको आकाशीय क्षेत्र में मार्गदर्शन करते हुए",
+  "bannerDes": "हमारी सम्पूर्ण ज्योतिष सेवाओं के साथ आत्म-खोज की एक यात्रा पर निकलें, पंडित ललित लाहोनी द्वारा तैयार की गई",
+  "metaTitle": "एस्ट्रोलोहानी पर आकाशीय मार्गदर्शन का खोजें | वैदिक कुंडली, वास्तु शास्त्र, रत्न सुझाव और अधिक",
+  "metaDescription": "एस्ट्रोलोहानी की ज्योतिष सेवाओं के साथ एक परिवर्तनात्मक यात्रा पर निकलें। वैदिक कुंडली से लेकर वास्तु शास्त्र के विशेषज्ञ परामर्श तक, अपने जीवन के मार्ग के लिए आकाशीय समरसता और मार्गदर्शन पाएं। अभी खोजें!",
+  "allServicesData": [
+    {
+      "img": "/mainServicesImg/servicesVedic.svg",
+      "title": "वैदिक कुंडली (कुंडली निर्माण)",
+      "des": "अपनी जीवन की ब्रह्मांडिक विविधता को खोलें एस्ट्रोलोहानी की व्यक्तिगत वैदिक कुंडली के साथ - आपके लिए विशेष रूप से तैयार की गई एक आकाशीय जीवन कहानी पुस्तक।"
+    },
+    {
+      "img": "/mainServicesImg/servicesVastu.svg",
+      "title": "वास्तु विजिट (वास्तु शास्त्र विशेषज्ञता)",
+      "des": "हमारी वास्तु विजिट सेवा के साथ अपने निवास और कार्य क्षेत्रों को उच्च बनाएं, जहाँ पंडित लाहोनी और उनकी टीम आकाशीय इंटीरियर डिज़ाइन की कला को घरों, व्यापार और उद्योगों को समार्थ वातावरणों में परिवर्तित करने के लिए लाते हैं।"
+    },
+    {
+      "img": "/mainServicesImg/servicesGemstone.svg",
+      "title": "रत्न सुझाव और बिक्री",
+      "des": "एस्ट्रोलोहानी की रत्न सेवा के साथ एक परिवर्तनात्मक यात्रा पर निकलें, जो आपके कुंडली विश्लेषण के साथ संरेखित किए गए आकाशीय साथीदारों को प्रस्तुत करती है - ग्रहीय प्रभावों को मजबूत करने और आपकी ऊर्जाओं में संतुलन लाने के लिए।"
+    },
+    {
+      "img": "/mainServicesImg/servicesVarshik.svg",
+      "title": "वार्षिक फल के साथ भविष्य को आगे बढ़ाएं!",
+      "des": "आगामी वर्ष के लिए तैयारी करें एस्ट्रोलोहानी की वार्षिक फल सेवा के साथ, जो आपके जीवन के अगले अध्याय के पट के एक आकाशीय पूर्वानुमान का अनुभव प्रदान करती है। पंडित लाहोनी के 25 वर्ष के अनुभव से नेतृत्वित, यह व्यक्तिगत यात्रा एक आकाशीय मार्गनिर्देशिका प्रस्तुत करती है, जो आगामी वर्ष के मोड़ और मोड़ों में आपको स्पष्टता और दूरदर्शिता के साथ निर्देशित करती है।"
+    },
+    {
+      "img": "/mainServicesImg/servicesKundali.svg",
+      "title": "एस्ट्रोलोहानी में कुंडली मिलन के साथ स्थायी प्रेम का पता लगाएं, उत्तराखंड में रुद्रपुर में",
+      "des": "पंडित लाहोनी के 25 वर्ष के अनुभव के साथ, रुद्रपुर में एस्ट्रोलोहानी के कुंडली मिलन सेवा के साथ स्थायी संबंध बनाएं। यह आकाशीय मैचमेकिंग अनुभव प्रेम और विवाह में संगतता सुनिश्चित करता है जीवन के ग्रहीय बलों के सटीक विश्लेषण के माध्यम से"
+    },
+    {
+      "img": "/mainServicesImg/servicesMuhurat.svg",
+      "title": "उत्तराखंड के रुद्रपुर में आकाशीय मुहूर्त सुझाव से संगठित भविष्य को आगे बढ़ाएं",
+      "des": "एस्ट्रोलोहानी की मुहूर्त सुझाव सेवा के साथ ब्रह्मांडीय संरेखण की शक्ति का उपयोग करें। पंडित लाहोनी के 25 वर्ष के अनुभव से नेतृत्वित, हमारे विशेषज्ञ पूर्वानुमान आपको विवाह, व्यापार लॉन्च और महत्वपूर्ण जीवन के घटनाओं के लिए शुभ समय के लिए मार्गदर्शन करते हैं।"
+    }
+  ]
 }
