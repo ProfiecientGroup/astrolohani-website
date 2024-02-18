@@ -26,8 +26,8 @@ import call from "../../../assets/icons/appHeader/call.webp";
 import facebook from "../../../assets/icons/footerIcon/facebook.svg";
 import instagram from "../../../assets/icons/footerIcon/instagram.svg";
 import LanguageSwitcher from "../LanguageSwitcher";
-import { Link, NavLink } from "react-router-dom";
 import { isActiveTab } from "../../helpers/methods";
+import { useNavigate } from "react-router-dom";
 
 interface CustomProps {
   toggleDrawer: Function;
@@ -88,10 +88,7 @@ const AppHeader = (props: CustomProps) => {
   const classes = appHeaderStyles;
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const [menuMobileVisible, setMenuMobileVisible] = useState<boolean>(false);
-
-  const handleClose = () => {
-    setMenuMobileVisible(false);
-  };
+  const navigate = useNavigate();
 
   const handleMenuMobileVisibility = (event: any) => {
     setMenuMobileVisible(event.currentTarget);
@@ -129,19 +126,22 @@ const AppHeader = (props: CustomProps) => {
   const getNavMenu = () => {
     return (
       <List sx={classes.navMenuMain}>
-        <NavLink to={urls.homePathView} onClick={() => handleClose()}>
+        <Box
+          onClick={() => {
+            setMenuMobileVisible(false);
+            navigate(urls.homePathView);
+          }}
+        >
           <ListItem
             sx={[
               classes.navBtn,
               isActiveTab(urls.homePathView) && classes.selected,
             ]}
-            onClick={(e) => {
-              setMenuMobileVisible(false);
-            }}
           >
             Home
           </ListItem>
-        </NavLink>
+        </Box>
+
         <Divider
           orientation="vertical"
           variant="middle"
@@ -150,19 +150,21 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <NavLink to={urls.aboutUsPathView} onClick={() => handleClose()}>
+        <Box
+          onClick={() => {
+            setMenuMobileVisible(false);
+            navigate(urls.aboutUsPathView);
+          }}
+        >
           <ListItem
             sx={[
               classes.navBtn,
               isActiveTab(urls.aboutUsPathView) && classes.selected,
             ]}
-            onClick={(e) => {
-              setMenuMobileVisible(false);
-            }}
           >
             About
           </ListItem>
-        </NavLink>
+        </Box>
         <Divider
           orientation="vertical"
           variant="middle"
@@ -171,19 +173,21 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <NavLink to={urls.servicesViewPath} onClick={() => handleClose()}>
+        <Box
+          onClick={() => {
+            setMenuMobileVisible(false);
+            navigate(urls.servicesViewPath);
+          }}
+        >
           <ListItem
             sx={[
               classes.navBtn,
               isActiveTab(urls.servicesViewPath) && classes.selected,
             ]}
-            onClick={(e) => {
-              setMenuMobileVisible(false);
-            }}
           >
             Services
           </ListItem>
-        </NavLink>
+        </Box>
         <Divider
           orientation="vertical"
           variant="middle"
@@ -192,23 +196,21 @@ const AppHeader = (props: CustomProps) => {
             backgroundColor: "#FFFFFF",
           }}
         />
-        <NavLink
-          to={urls.contactUsViewPath}
-          style={{ textDecoration: "none" }}
-          onClick={() => handleClose()}
+        <Box
+          onClick={() => {
+            setMenuMobileVisible(false);
+            navigate(urls.contactUsViewPath);
+          }}
         >
           <ListItem
             sx={[
               classes.navBtn,
               isActiveTab(urls.contactUsViewPath) && classes.selected,
             ]}
-            onClick={(e) => {
-              setMenuMobileVisible(false);
-            }}
           >
             Contact
           </ListItem>
-        </NavLink>
+        </Box>
       </List>
     );
   };
@@ -231,7 +233,11 @@ const AppHeader = (props: CustomProps) => {
                 justifyContent="space-between"
                 alignItems={{ lg: "center" }}
               >
-                <Link to={urls.homePathView}>
+                <Box
+                  onClick={() => {
+                    navigate(urls.homePathView);
+                  }}
+                >
                   <img
                     src={logo}
                     height={isDesktop ? "50px" : "100%"}
@@ -240,7 +246,7 @@ const AppHeader = (props: CustomProps) => {
                       cursor: "pointer",
                     }}
                   />
-                </Link>
+                </Box>
                 <Stack
                   direction={{
                     lg: "row",
@@ -254,7 +260,11 @@ const AppHeader = (props: CustomProps) => {
                     return (
                       <Box sx={classes.addressMain} key={index}>
                         <Box sx={classes.addressInner}>
-                          <Link to={urls.homePathView}>
+                          <Box
+                            onClick={() => {
+                              navigate(urls.homePathView);
+                            }}
+                          >
                             <img
                               src={i.icon}
                               alt="adress"
@@ -264,7 +274,7 @@ const AppHeader = (props: CustomProps) => {
                                 textAlign: "center",
                               }}
                             />
-                          </Link>
+                          </Box>
                         </Box>
                         <Box ml={2}>
                           <Typography sx={classes.reachUsText}>
@@ -290,7 +300,11 @@ const AppHeader = (props: CustomProps) => {
                   <LanguageSwitcher fontColor={"#FFFFFF"} />
                   {socialMediaIcon.map((i: any, index: number) => {
                     return (
-                      <Link to={i.redirectLink} key={index}>
+                      <Box
+                        onClick={() => {
+                          navigate(i.redirectLink);
+                        }}
+                      >
                         <a target="_target">
                           <img
                             src={i.icon}
@@ -302,13 +316,17 @@ const AppHeader = (props: CustomProps) => {
                             }}
                           />
                         </a>
-                      </Link>
+                      </Box>
                     );
                   })}
                 </Stack>
               )}
               {!isDesktop && (
-                <Link to={urls.homePathView}>
+                <Box
+                  onClick={() => {
+                    navigate(urls.homePathView);
+                  }}
+                >
                   <a target="_target">
                     <img
                       src={logo}
@@ -319,7 +337,7 @@ const AppHeader = (props: CustomProps) => {
                       }}
                     />
                   </a>
-                </Link>
+                </Box>
               )}
               {!isDesktop && (
                 <IconButton

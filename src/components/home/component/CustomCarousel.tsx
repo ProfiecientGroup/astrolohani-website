@@ -16,7 +16,7 @@ import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftR
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import urls from "../../../global/constants/urls";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CustomCarousel = () => {
   const classes = homeStyles;
@@ -31,6 +31,7 @@ const CustomCarousel = () => {
     ? bannerCarouselTranslation
     : [];
   const maxSteps = bannerCarousel.length;
+  const navigate = useNavigate();
 
   const handleStepChange = (step: number) => {
     setActiveStep(step);
@@ -70,10 +71,9 @@ const CustomCarousel = () => {
                       backgroundColor: "#FFFFFF",
                       ...centerItemFlex,
                       transition: "all ease 2s",
-                      [theme.breakpoints.down("md")]:{
+                      [theme.breakpoints.down("md")]: {
                         height: "500px",
-
-                      }
+                      },
                     }}
                   >
                     {isDesktop && (
@@ -127,17 +127,14 @@ const CustomCarousel = () => {
                         <Typography gutterBottom sx={classes.bannerDes}>
                           {step.des}
                         </Typography>
-                        <Link
-                          to={urls.contactUsViewPath}
-                          target="_blank"
-                          style={{ textDecoration: "none" }}
+                        <Box
+                          sx={classes.bannerBtn}
+                          onClick={() => navigate(urls.contactUsViewPath)}
                         >
-                          <Box sx={classes.bannerBtn}>
-                            <Typography sx={classes.btnText}>
-                              Appointment
-                            </Typography>
-                          </Box>
-                        </Link>
+                          <Typography sx={classes.btnText}>
+                            Appointment
+                          </Typography>
+                        </Box>
                       </Stack>
                     </Container>
                     {isDesktop && (

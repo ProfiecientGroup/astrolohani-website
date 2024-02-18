@@ -45,7 +45,7 @@ const MainServices = () => {
           <Grid container spacing={3}>
             {allServicesData?.map((i: any, index: number) => {
               return (
-                <Grid item lg={6} md={6} sm={12} xs={12} mb={2} height={"100%"}>
+                <Grid item lg={6} md={6} sm={12} xs={12} mb={2} height={"100%"} key={index}>
                   <Stack direction="column" textAlign={"start"}>
                     <img src={i.img} style={{ marginBottom: 20 }} />
                     <Typography sx={classes.servicesText}>

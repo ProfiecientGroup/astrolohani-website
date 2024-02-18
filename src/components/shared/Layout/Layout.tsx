@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import LayoutStyles from "./Layout.styles";
 import upArrow from "../../../assets/images/upArrow.svg";
 import whatsappIcon from "../../../assets/icons/whatsappIcon.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface CustomProps {
   children?: any;
@@ -15,6 +15,7 @@ const Layout = (props: CustomProps) => {
   const classes = LayoutStyles;
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
   const [hideIcon, setHideIcon] = useState("none");
+  const navigate = useNavigate();
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -75,24 +76,23 @@ const Layout = (props: CustomProps) => {
           bottom: 18,
           zIndex: 2,
         }}
+        onClick={() => navigate(whatsappUrl)}
       >
-        <Link to={whatsappUrl}>
-          <a target="_blank" rel="noopener noreferrer">
-            <img
-              src={whatsappIcon}
-              alt="scrollup"
-              // onClick={goToTop}
-              height="10%"
-              style={{
-                // display: hideIcon,
-                cursor: "pointer",
-                position: "fixed",
-                right: 35,
-                bottom: 10,
-              }}
-            />
-          </a>
-        </Link>
+        <a target="_blank" rel="noopener noreferrer">
+          <img
+            src={whatsappIcon}
+            alt="scrollup"
+            // onClick={goToTop}
+            height="10%"
+            style={{
+              // display: hideIcon,
+              cursor: "pointer",
+              position: "fixed",
+              right: 35,
+              bottom: 10,
+            }}
+          />
+        </a>
       </Box>
     </>
   );

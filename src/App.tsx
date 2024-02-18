@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Box } from "@mui/material";
 import { Helmet } from "react-helmet";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomeComponent from "./components/home/Home";
 import Layout from "./components/shared/Layout/Layout";
 import AboutUs from "./components/aboutUs/AboutUs";

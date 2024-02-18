@@ -19,12 +19,12 @@ import { comingFallData } from "./HomeData";
 import urls from "../../global/constants/urls";
 import playBtn from "../../assets/images/home/playBtn.svg";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import CustomCarousel from "./component/CustomCarousel";
 import Testimonials from "./component/Testimonials";
 import HomeAccordion from "./component/HomeAccordion";
 import OurServicesTestimonial from "./component/OurServicesTestimonial";
 import ContactUsForm from "../contactus/ContactUsForm";
+import { useNavigate } from "react-router-dom";
 
 const HomeComponent = () => {
   const { t } = useTranslation("home"); // Use the translation hook
@@ -34,6 +34,7 @@ const HomeComponent = () => {
   const liteData: any = t("liteData", { returnObjects: true });
   const whyChooseUsData: any = t("whyChooseUsData", { returnObjects: true });
   const accordionContent: any = t("accordionContent", { returnObjects: true });
+  const navigate = useNavigate();
 
   const toggleVideoPlay = () => {
     const video: any = document.getElementById("your-video-id");
@@ -185,29 +186,21 @@ const HomeComponent = () => {
                     alignItems="center"
                   >
                     <Box sx={classes.readBtn} marginTop={0}>
-                      <Link
-                        to={urls.aboutUsPathView}
-                        target="_blank"
-                        style={{ textDecoration: "none" }}
+                      <Typography
+                        sx={classes.readText}
+                        onClick={() => navigate(urls.aboutUsPathView)}
                       >
-                        <Typography sx={classes.readText}>
-                          {t("btnName")}
-                        </Typography>
-                      </Link>
+                        {t("btnName")}
+                      </Typography>
                     </Box>
                     <Box sx={classes.bookingBtn}>
-                      <Link
-                        to={urls.contactUsViewPath}
-                        target="_blank"
-                        style={{ textDecoration: "none" }}
+                      <Typography
+                        sx={classes.btnText}
+                        color="#272C65 !important"
+                        onClick={() => navigate(urls.contactUsViewPath)}
                       >
-                        <Typography
-                          sx={classes.btnText}
-                          color="#272C65 !important"
-                        >
-                          {t("appointmentName")}
-                        </Typography>
-                      </Link>
+                        {t("appointmentName")}
+                      </Typography>
                     </Box>
                   </Stack>
                 </Box>

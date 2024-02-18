@@ -15,8 +15,8 @@ import MessageFooter from "../../../assets/icons/footerIcon/mail.svg";
 import CallingFooter from "../../../assets/icons/footerIcon/phone.svg";
 import map from "../../../assets/icons/footerIcon/map.svg";
 import strings from "../../../global/constants/strings";
-import { Link } from "react-router-dom";
 import CustomMap from "./customMap";
+import { useNavigate } from "react-router-dom";
 
 const footerData = [
   {
@@ -61,6 +61,7 @@ const footerData = [
 const AppFooter = () => {
   const classes = appFooterStyles;
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const navigate = useNavigate();
 
   const getYear = () => {
     return new Date().getFullYear();
@@ -102,25 +103,21 @@ const AppFooter = () => {
               </Stack>
               <Stack direction={"row"} gap={1}>
                 <img src={CallingFooter} alt="call" />
-                <Link
-                  to={`tel:${strings.CONTACT}`}
-                  style={{ textDecoration: "none" }}
+                <Typography
+                  onClick={() => navigate(`tel:${strings.CONTACT}`)}
+                  sx={classes.regularFont}
                 >
-                  <Typography sx={classes.regularFont}>
-                    {strings.CONTACT}
-                  </Typography>
-                </Link>
+                  {strings.CONTACT}
+                </Typography>
               </Stack>
               <Stack direction={"row"} gap={1}>
                 <img src={MessageFooter} alt="message" />
-                <Link
-                  to={`mailto:${strings.SUPPORT}`}
-                  style={{ textDecoration: "none" }}
+                <Typography
+                  onClick={() => navigate(`mailto:${strings.SUPPORT}`)}
+                  sx={classes.regularFont}
                 >
-                  <Typography sx={classes.regularFont}>
-                    {strings.SUPPORT}
-                  </Typography>
-                </Link>
+                  {strings.SUPPORT}
+                </Typography>
               </Stack>
             </Stack>
           </Grid>
@@ -132,18 +129,13 @@ const AppFooter = () => {
                     <Typography sx={classes.label}>{data.title}</Typography>
                     {data.data.map((i: any, index: number) => {
                       return (
-                        <Link
-                          to={i.redirectLink}
+                        <Typography
+                          onClick={() => navigate(i.redirectLink)}
                           key={index}
-                          style={{ textDecoration: "none" }}
+                          sx={[classes.regularFont, classes.pointerCursor]}
                         >
-                          <Typography
-                            key={index}
-                            sx={[classes.regularFont, classes.pointerCursor]}
-                          >
-                            {i.name}
-                          </Typography>
-                        </Link>
+                          {i.name}
+                        </Typography>
                       );
                     })}
                   </Stack>

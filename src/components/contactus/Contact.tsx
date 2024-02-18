@@ -1,7 +1,6 @@
 import {
   Box,
   Container,
-  Link,
   Stack,
   Typography,
   useMediaQuery,
@@ -14,6 +13,7 @@ import panditPhoto from "../../assets/images/contact/panditPhoto.webp";
 import urls from "../../global/constants/urls";
 import { theme } from "../../styles/styles";
 import ContactUsForm from "./ContactUsForm";
+import { useNavigate } from "react-router-dom";
 
 const addressData = [
   {
@@ -31,6 +31,7 @@ const addressData = [
 const Contact = () => {
   const classes = ContactUsStyles;
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const navigate = useNavigate();
 
   const introDeskTopView = () => {
     return (
@@ -53,18 +54,19 @@ const Contact = () => {
           {addressData.map((i: any, index: number) => {
             return (
               <Box sx={classes.addressMain} key={index}>
-                <Box sx={classes.addressInner}>
-                  <Link href={urls.homePathView}>
-                    <img
-                      src={i.icon}
-                      alt="address"
-                      height={isDesktop ? "17px" : "10px"}
-                      style={{
-                        cursor: "pointer",
-                        textAlign: "center",
-                      }}
-                    />
-                  </Link>
+                <Box
+                  sx={classes.addressInner}
+                  onClick={() => navigate(urls.homePathView)}
+                >
+                  <img
+                    src={i.icon}
+                    alt="address"
+                    height={isDesktop ? "17px" : "10px"}
+                    style={{
+                      cursor: "pointer",
+                      textAlign: "center",
+                    }}
+                  />
                 </Box>
                 <Box ml={2}>
                   <Typography sx={classes.reachUsText}>{i.title}</Typography>
@@ -104,18 +106,19 @@ const Contact = () => {
           {addressData.map((i: any, index: number) => {
             return (
               <Box key={index} display="flex">
-                <Box sx={classes.addressInner}>
-                  <Link href={urls.homePathView}>
-                    <img
-                      src={i.icon}
-                      alt="address"
-                      height="10px"
-                      style={{
-                        cursor: "pointer",
-                        textAlign: "center",
-                      }}
-                    />
-                  </Link>
+                <Box
+                  sx={classes.addressInner}
+                  onClick={() => navigate(urls.homePathView)}
+                >
+                  <img
+                    src={i.icon}
+                    alt="address"
+                    height="10px"
+                    style={{
+                      cursor: "pointer",
+                      textAlign: "center",
+                    }}
+                  />
                 </Box>
                 <Box ml={2}>
                   <Typography sx={classes.reachUsText}>{i.title}</Typography>

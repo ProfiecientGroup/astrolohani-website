@@ -12,11 +12,11 @@ import urls from "../../../global/constants/urls";
 import strings from "../../../global/constants/strings";
 import call from "../../../assets/icons/appHeader/call.webp";
 import mail from "../../../assets/icons/appHeader/adress.webp";
-import { Link } from "react-router-dom";
 import CloseButton from "../../../global/components/CloseButton/CloseButton";
 import LanguageSwitcher from "../LanguageSwitcher";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { useNavigate } from "react-router-dom";
 interface CustomProps {
   setMenuMobileVisible?: Function;
   isActive?: boolean;
@@ -38,11 +38,15 @@ const AppDrawer = (props: CustomProps) => {
   const classes = appDrawerStyles;
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const navigate = useNavigate();
 
   const getLogo = () => {
     return (
       <Box mt={6} style={{ display: "flex", justifyContent: "center" }}>
-        <Link to={urls.homePathView} style={{ textDecoration: "none" }}>
+        <Box
+          onClick={() => navigate(urls.homePathView)}
+          style={{ textDecoration: "none" }}
+        >
           <img
             src={logo}
             alt="astroLohani"
@@ -51,7 +55,7 @@ const AppDrawer = (props: CustomProps) => {
               cursor: "pointer",
             }}
           />
-        </Link>
+        </Box>
       </Box>
     );
   };
@@ -68,27 +72,27 @@ const AppDrawer = (props: CustomProps) => {
   const getYear = () => {
     return new Date().getFullYear();
   };
+
   const socialMedia = () => {
     return (
       <Stack direction="column" alignItems="center" spacing={3}>
         <Stack direction={"row"} gap={1} alignItems="center">
           <img src={call} alt="phone" height="15px" width="15px" />
-          <Link
-            to={`tel:${strings.CONTACT}`}
-            style={{ textDecoration: "none" }}
+          <Typography
+            onClick={() => navigate(`tel:${strings.CONTACT}`)}
+            sx={classes.regularFont}
           >
-            <Typography sx={classes.regularFont}>{strings.CONTACT}</Typography>
-          </Link>
+            {strings.CONTACT}
+          </Typography>
         </Stack>
         <Stack direction={"row"} gap={1} alignItems="center">
           <img src={mail} alt="mail" height="15px" width="15px" />
-
-          <Link
-            to={`mailto:${strings.SUPPORT}`}
-            style={{ textDecoration: "none" }}
+          <Typography
+            onClick={() => navigate(`mailto:${strings.SUPPORT}`)}
+            sx={classes.regularFont}
           >
-            <Typography sx={classes.regularFont}>{strings.SUPPORT}</Typography>
-          </Link>
+            {strings.SUPPORT}
+          </Typography>
         </Stack>
         <Stack direction="row">
           <Typography sx={classes.regularFont} textAlign="center">
@@ -117,9 +121,9 @@ const AppDrawer = (props: CustomProps) => {
           <Stack direction="row" spacing={2} justifyContent="center" mb={2}>
             {socialMediaIcon.map((i: any, index: number) => {
               return (
-                <Link to={i.redirectLink} key={index}>
+                <Box onClick={() => navigate(i.redirectLink)}>
                   <a target="_target">{i.icon}</a>
-                </Link>
+                </Box>
               );
             })}
           </Stack>
